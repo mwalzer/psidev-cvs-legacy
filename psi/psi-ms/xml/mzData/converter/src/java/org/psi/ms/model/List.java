@@ -27,16 +27,6 @@ public class List implements java.io.Serializable {
     //--------------------------/
 
     /**
-     * Field _count
-     */
-    private int _count;
-
-    /**
-     * keeps track of state for field: _count
-     */
-    private boolean _has_count;
-
-    /**
      * Scan or acquisition number from original raw file used to
      * create this peak list.
      */
@@ -125,14 +115,14 @@ public class List implements java.io.Serializable {
      * @return the value of field 'count'.
      */
     public int getCount() {
-        return this._count;
+        return this._acqList.size();
     } //-- int getCount()
 
     /**
      * Method hasCount
      */
     public boolean hasCount() {
-        return this._has_count;
+        return true;
     } //-- boolean hasCount()
 
     /**
@@ -187,8 +177,6 @@ public class List implements java.io.Serializable {
      * @param count the value of field 'count'.
      */
     public void setCount(int count) {
-        this._count = count;
-        this._has_count = true;
     } //-- void setCount(int)
 
 }

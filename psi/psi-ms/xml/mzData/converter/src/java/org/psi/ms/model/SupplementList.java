@@ -26,16 +26,6 @@ public class SupplementList implements java.io.Serializable {
     //--------------------------/
 
     /**
-     * Field _count
-     */
-    private int _count;
-
-    /**
-     * keeps track of state for field: _count
-     */
-    private boolean _has_count;
-
-    /**
      * This is an individual supplemental data item. These may or
      * may not be keyed to an acqusition.
      */
@@ -78,13 +68,6 @@ public class SupplementList implements java.io.Serializable {
     } //-- void addSupplement(int, org.psi.ms.model.Supplement)
 
     /**
-     * Method deleteCount
-     */
-    public void deleteCount() {
-        this._has_count = false;
-    } //-- void deleteCount()
-
-    /**
      * Method enumerateSupplement
      */
     public java.util.Enumeration enumerateSupplement() {
@@ -97,7 +80,7 @@ public class SupplementList implements java.io.Serializable {
      * @return the value of field 'count'.
      */
     public int getCount() {
-        return this._count;
+        return this._supplementList.size();
     } //-- int getCount()
 
     /**
@@ -138,7 +121,7 @@ public class SupplementList implements java.io.Serializable {
      * Method hasCount
      */
     public boolean hasCount() {
-        return this._has_count;
+        return true;
     } //-- boolean hasCount()
 
     /**
@@ -165,8 +148,6 @@ public class SupplementList implements java.io.Serializable {
      * @param count the value of field 'count'.
      */
     public void setCount(int count) {
-        this._count = count;
-        this._has_count = true;
     } //-- void setCount(int)
 
     /**

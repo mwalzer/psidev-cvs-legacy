@@ -27,16 +27,6 @@ public class AcqDescList implements java.io.Serializable {
     //--------------------------/
 
     /**
-     * Field _count
-     */
-    private int _count;
-
-    /**
-     * keeps track of state for field: _count
-     */
-    private boolean _has_count;
-
-    /**
      * There is one acqDesc for each acquisition below. The ID
      * attribute is keyed to the to acquisition ID.
      */
@@ -125,14 +115,14 @@ public class AcqDescList implements java.io.Serializable {
      * @return the value of field 'count'.
      */
     public int getCount() {
-        return this._count;
+        return this._acqDescList.size();
     } //-- int getCount()
 
     /**
      * Method hasCount
      */
     public boolean hasCount() {
-        return this._has_count;
+        return true;
     } //-- boolean hasCount()
 
     /**
@@ -187,8 +177,6 @@ public class AcqDescList implements java.io.Serializable {
      * @param count the value of field 'count'.
      */
     public void setCount(int count) {
-        this._count = count;
-        this._has_count = true;
     } //-- void setCount(int)
 
 }

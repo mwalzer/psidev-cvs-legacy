@@ -27,16 +27,6 @@ public class SupDescList implements java.io.Serializable {
     //--------------------------/
 
     /**
-     * Field _count
-     */
-    private int _count;
-
-    /**
-     * keeps track of state for field: _count
-     */
-    private boolean _has_count;
-
-    /**
      * There is one supDesc for each supplemental data entry below.
      * The ID attribute is keyed to the supplement ID below.
      */
@@ -79,13 +69,6 @@ public class SupDescList implements java.io.Serializable {
     } //-- void addSupDesc(int, org.psi.ms.model.SupDesc)
 
     /**
-     * Method deleteCount
-     */
-    public void deleteCount() {
-        this._has_count = false;
-    } //-- void deleteCount()
-
-    /**
      * Method enumerateSupDesc
      */
     public java.util.Enumeration enumerateSupDesc() {
@@ -98,7 +81,7 @@ public class SupDescList implements java.io.Serializable {
      * @return the value of field 'count'.
      */
     public int getCount() {
-        return this._count;
+        return this._supDescList.size();
     } //-- int getCount()
 
     /**
@@ -139,7 +122,7 @@ public class SupDescList implements java.io.Serializable {
      * Method hasCount
      */
     public boolean hasCount() {
-        return this._has_count;
+        return true;
     } //-- boolean hasCount()
 
     /**
@@ -166,8 +149,6 @@ public class SupDescList implements java.io.Serializable {
      * @param count the value of field 'count'.
      */
     public void setCount(int count) {
-        this._count = count;
-        this._has_count = true;
     } //-- void setCount(int)
 
     /**

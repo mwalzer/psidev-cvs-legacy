@@ -26,16 +26,6 @@ public class AcquisitionList implements java.io.Serializable {
     //--------------------------/
 
     /**
-     * Field _count
-     */
-    private int _count;
-
-    /**
-     * keeps track of state for field: _count
-     */
-    private boolean _has_count;
-
-    /**
      * This is an individual instrument acquisition. The peak list
      * is considered an array of acquisitions. there are two
      * primary ways of representing data. base64 encoded binary or
@@ -127,14 +117,14 @@ public class AcquisitionList implements java.io.Serializable {
      * @return the value of field 'count'.
      */
     public int getCount() {
-        return this._count;
+        return this._acquisitionList.size();
     } //-- int getCount()
 
     /**
      * Method hasCount
      */
     public boolean hasCount() {
-        return this._has_count;
+        return true;
     } //-- boolean hasCount()
 
     /**
@@ -189,8 +179,6 @@ public class AcquisitionList implements java.io.Serializable {
      * @param count the value of field 'count'.
      */
     public void setCount(int count) {
-        this._count = count;
-        this._has_count = true;
     } //-- void setCount(int)
 
 }

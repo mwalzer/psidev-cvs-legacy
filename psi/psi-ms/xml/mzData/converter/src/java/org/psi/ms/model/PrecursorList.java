@@ -26,16 +26,6 @@ public class PrecursorList implements java.io.Serializable {
     //--------------------------/
 
     /**
-     * Field _count
-     */
-    private int _count;
-
-    /**
-     * keeps track of state for field: _count
-     */
-    private boolean _has_count;
-
-    /**
      * This is the precursor step. If source activation is used
      * then msLevel is 0. The acqID points to the acquisition from
      * which the precursor was selected. If source activation was
@@ -92,7 +82,7 @@ public class PrecursorList implements java.io.Serializable {
      * @return the value of field 'count'.
      */
     public int getCount() {
-        return this._count;
+        return _precursorList.size();
     } //-- int getCount()
 
     /**
@@ -133,7 +123,7 @@ public class PrecursorList implements java.io.Serializable {
      * Method hasCount
      */
     public boolean hasCount() {
-        return this._has_count;
+        return true;
     } //-- boolean hasCount()
 
     /**
@@ -160,8 +150,6 @@ public class PrecursorList implements java.io.Serializable {
      * @param count the value of field 'count'.
      */
     public void setCount(int count) {
-        this._count = count;
-        this._has_count = true;
     } //-- void setCount(int)
 
     /**
