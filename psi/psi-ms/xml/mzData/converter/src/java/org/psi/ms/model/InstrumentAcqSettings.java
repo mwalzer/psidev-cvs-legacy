@@ -26,7 +26,7 @@ public class InstrumentAcqSettings implements Serializable {
     /**
      * Type of acquisition represented by the peak list (controlled)
      */
-    private AcqType _acqType = AcqType.FULL;
+    private AcqType _acqType;
     /**
      * Number of stages of mass spectrometry performed to generate
      * the peak list (MS^n).

@@ -30,7 +30,7 @@ public class AcqSpecification implements java.io.Serializable {
     /**
      * Field _method
      */
-    private Method _method = Method.AVERAGE;
+    private Method _method;
 
     /**
      * A list of acquisitions used to create the peak list. (May

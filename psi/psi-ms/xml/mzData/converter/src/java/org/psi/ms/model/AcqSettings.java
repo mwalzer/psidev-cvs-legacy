@@ -23,7 +23,7 @@ public class AcqSettings implements java.io.Serializable {
     /**
      * Type of spectrum
      */
-    private SpecType _specType = SpecType.DISCRETE;
+    private SpecType _specType;
     /**
      * Specification for combining raw scans/acquisitions into a
      * single peak list. Either a list of acquisitions, or a range
