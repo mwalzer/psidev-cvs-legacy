@@ -63,7 +63,7 @@ public class MzData implements java.io.Serializable {
         desc.setAdmin(admin);
 
         // Todo: this information must be provided by the user
-        admin.setSampleName("?");
+        admin.setSampleName("");
         Person contact = new Person();
         contact.setName("Kai Runte");
         contact.setInstitution("EMBL Outstation - EBI");
