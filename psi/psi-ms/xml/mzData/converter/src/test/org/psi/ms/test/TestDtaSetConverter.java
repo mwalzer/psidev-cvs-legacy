@@ -25,6 +25,6 @@ public class TestDtaSetConverter {
         DtaSetConverter dtaSetConverter = new DtaSetConverter();
         MzData mzData = new MzData();
         dtaSetConverter = new DtaSetConverter();
-        dtaSetConverter.convertDirectory(argv[0], argv[1], mzData, MzDataWriter.OutputType.BASE64);
+        dtaSetConverter.convertDirectory(argv[0], argv[1], mzData, MzDataWriter.OutputType.XML);
     }
 }
