@@ -16,6 +16,7 @@ package org.psi.ms.model;
 /**
  * This element holds additional data or annotation information.
  * Only controlled name values are allowed here.
+ * Todo: this data needs to be provided by the user
  *
  * @version $Revision$ $Date$
  */

@@ -17,6 +17,7 @@ package org.psi.ms.model;
  * Description of the peak processing method. This element
  * describes the base method used if a variable method is used or
  * not otherwise specified in the acquisition section.
+ * Todo: this data needs to be provided by the user
  *
  * @version $Revision$ $Date$
  */

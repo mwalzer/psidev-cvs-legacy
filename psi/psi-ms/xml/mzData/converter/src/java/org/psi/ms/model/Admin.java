@@ -16,6 +16,7 @@ import java.util.Vector;
 /**
  * Administrative information pertaining to the entire data set is
  * stored here.
+ * Todo: this data needs to be provided by the user
  *
  * @version $Revision$ $Date$
  */

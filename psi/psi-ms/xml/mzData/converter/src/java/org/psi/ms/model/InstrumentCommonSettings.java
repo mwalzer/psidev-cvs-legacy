@@ -16,6 +16,7 @@ import java.util.Vector;
 /**
  * InstrumentCommonSettings information common to all acquisitions is stored in
  * this section.
+ * Todo: this data needs to be provided by the user
  *
  * @version $Revision$ $Date$
  */
