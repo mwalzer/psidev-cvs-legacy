@@ -427,7 +427,7 @@ public class MzDataWriter {
     }
 
     private void marshall(InstrumentAcqSettings instrumentAcqSettings) throws IOException {
-        startTag(null, "instrument");
+        startTag(null, "acqInst");
         attribute(null, "acqType", instrumentAcqSettings.getAcqType());
         attribute(null, "msLevel", Integer.toString(instrumentAcqSettings.getMsLevel()));
         InstrumentAcqSettings.Polarity polarity = instrumentAcqSettings.getPolarity();
@@ -446,20 +446,20 @@ public class MzDataWriter {
         for (int iii = 0; iii < instUserParamCount; iii++) {
             marshall(instrumentAcqSettings.getInstUserParam(iii), "instUserParam");
         }
-        endTag(null, "instrument");
+        endTag(null, "acqInst");
     }
 
     private void marshall(MzRange mzRange) throws IOException {
         startTag(null, "mzRange");
-        attribute(null, "start", Integer.toString(mzRange.getStart()));
-        attribute(null, "stop", Integer.toString(mzRange.getStop()));
+        attribute(null, "start", Float.toString(mzRange.getStart()));
+        attribute(null, "stop", Float.toString(mzRange.getStop()));
         endTag(null, "mzRange");
     }
 
     private void marshall(AcqTime acqTime) throws IOException {
         startTag(null, "acqTime");
         attribute(null, "units", acqTime.getUnits());
-        text(xsDateTimeFormatter.format(acqTime.getContent()));
+        text(Float.toString(acqTime.getContent()));
         endTag(null, "acqTime");
     }
 

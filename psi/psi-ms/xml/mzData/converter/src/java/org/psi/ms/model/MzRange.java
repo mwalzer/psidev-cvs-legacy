@@ -28,7 +28,7 @@ public class MzRange implements java.io.Serializable {
     /**
      * Field _start
      */
-    private int _start;
+    private float _start;
 
     /**
      * keeps track of state for field: _start
@@ -38,7 +38,7 @@ public class MzRange implements java.io.Serializable {
     /**
      * Field _stop
      */
-    private int _stop;
+    private float _stop;
 
     /**
      * keeps track of state for field: _stop
@@ -64,7 +64,7 @@ public class MzRange implements java.io.Serializable {
      *
      * @return the value of field 'start'.
      */
-    public int getStart() {
+    public float getStart() {
         return this._start;
     } //-- int getStart()
 
@@ -73,7 +73,7 @@ public class MzRange implements java.io.Serializable {
      *
      * @return the value of field 'stop'.
      */
-    public int getStop() {
+    public float getStop() {
         return this._stop;
     } //-- int getStop()
 
@@ -96,7 +96,7 @@ public class MzRange implements java.io.Serializable {
      *
      * @param start the value of field 'start'.
      */
-    public void setStart(int start) {
+    public void setStart(float start) {
         this._start = start;
         this._has_start = true;
     } //-- void setStart(int)
@@ -106,7 +106,7 @@ public class MzRange implements java.io.Serializable {
      *
      * @param stop the value of field 'stop'.
      */
-    public void setStop(int stop) {
+    public void setStop(float stop) {
         this._stop = stop;
         this._has_stop = true;
     } //-- void setStop(int)

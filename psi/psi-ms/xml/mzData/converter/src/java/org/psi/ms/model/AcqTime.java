@@ -28,7 +28,7 @@ public class AcqTime implements java.io.Serializable {
     /**
      * internal content storage
      */
-    private java.util.Date _content;
+    private float _content;
 
     /**
      * Field _units
@@ -55,7 +55,7 @@ public class AcqTime implements java.io.Serializable {
      *
      * @return the value of field 'content'.
      */
-    public java.util.Date getContent() {
+    public float getContent() {
         return this._content;
     } //-- java.util.Date getContent()
 
@@ -74,7 +74,7 @@ public class AcqTime implements java.io.Serializable {
      *
      * @param content the value of field 'content'.
      */
-    public void setContent(java.util.Date content) {
+    public void setContent(float content) {
         this._content = content;
     } //-- void setContent(java.util.Date)
 
