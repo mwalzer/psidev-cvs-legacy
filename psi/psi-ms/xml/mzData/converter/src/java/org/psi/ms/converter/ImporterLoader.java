@@ -53,7 +53,7 @@ public class ImporterLoader {
     /**
      * Name for the prefences item plugin path.
      */
-    private static final String PREF_PLUGIN_PATH = "ImporterLoader.plugins.path";
+    public static final String PREF_PLUGIN_PATH = "ImporterLoader.plugins.path";
 
     /**
      * Create a new plug-in loader with the given search path.
@@ -71,6 +71,7 @@ public class ImporterLoader {
      */
     public ImporterLoader() throws FileNotFoundException {
         String pathString = preferences.get(PREF_PLUGIN_PATH, null);
+//        String pathString = preferences.get("muggins", null);
         importerList = new Vector();
         if (pathString == null) {
             String classpath = System.getProperty("java.class.path");

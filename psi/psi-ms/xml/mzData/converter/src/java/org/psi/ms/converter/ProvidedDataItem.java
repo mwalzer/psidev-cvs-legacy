@@ -11,7 +11,7 @@ package org.psi.ms.converter;
 import java.util.Hashtable;
 
 /**
- * 
+ *
  * @author krunte
  */
 public final class ProvidedDataItem {

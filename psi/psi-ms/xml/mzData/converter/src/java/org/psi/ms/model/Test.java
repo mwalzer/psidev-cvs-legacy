@@ -43,7 +43,6 @@ public class Test implements java.io.Serializable {
      */
     private java.util.Vector _testUserParamList;
 
-
     //----------------/
     //- Constructors -/
     //----------------/
