@@ -85,4 +85,14 @@ public class DtaSetConverter {
             e.printStackTrace();
         }
     }
+
+    public static void main(String[] argv) throws IOException, PsiMsConverterException, ValidationException, MarshalException {
+        DtaSetConverter dtaSetConverter = new DtaSetConverter();
+        MzData mzData = new MzData();
+        dtaSetConverter = new DtaSetConverter(DtaReader.XML_ELEMENTS);
+        dtaSetConverter.convertDirectory(argv[0], argv[1], mzData);
+        mzData = new MzData();
+        dtaSetConverter = new DtaSetConverter(DtaReader.BASE64);
+        dtaSetConverter.convertDirectory(argv[0], argv[1] + "_base64", mzData);
+    }
 }
