@@ -231,7 +231,7 @@
             <xs:element name="version" type="xs:string"/>
             <xs:element name="comments" type="xs:string" minOccurs="0"/>
         </xs:sequence>
-        <xs:attribute name="completionTime" type="xs:float" use="optional"/>
+        <xs:attribute name="completionTime" type="xs:dateTime" use="optional"/>
     </xs:complexType>
     <xs:complexType name="dataProcessingType">
         <xs:annotation>
