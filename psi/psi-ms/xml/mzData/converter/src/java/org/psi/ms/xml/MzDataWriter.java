@@ -12,6 +12,7 @@ import org.apache.commons.codec.EncoderException;
 import org.psi.ms.helper.Utils;
 import org.psi.ms.helper.PsiMsConverterException;
 import org.psi.ms.model.*;
+import org.psi.ms.converter.ExporterI;
 import org.xmlpull.mxp1_serializer.MXSerializer;
 import org.xmlpull.v1.XmlSerializer;
 
@@ -30,7 +31,7 @@ import java.util.zip.ZipOutputStream;
  *
  * @author krunte
  */
-public class MzDataWriter {
+public class MzDataWriter implements ExporterI {
 
     /**
      * This class is responsible for writing
