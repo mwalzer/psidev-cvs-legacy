@@ -40,7 +40,7 @@ import java.util.List;
  *
  * @author Kai Runte
  */
-public interface ConverterI {
+public interface ImporterI {
 
     /**
      * Initializes a Desc(ription) object from the provide source file or directory.

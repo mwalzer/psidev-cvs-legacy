@@ -92,6 +92,8 @@ public class Desc implements java.io.Serializable {
      * @return the value of field 'admin'.
      */
     public org.psi.ms.model.Admin getAdmin() {
+        if (_admin == null)
+            _admin = new Admin();
         return this._admin;
     } //-- org.psi.ms.model.Admin getAdmin()
 
