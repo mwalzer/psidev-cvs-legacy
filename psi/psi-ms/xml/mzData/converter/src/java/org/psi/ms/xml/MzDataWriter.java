@@ -617,7 +617,7 @@ public class MzDataWriter implements ExporterI {
             attribute(null, "length", Integer.toString(length));
             String base64String = "";
             try {
-                base64String = Utils.floatListToBase64String(rawDataType.getFloat());
+                base64String = Utils.floatListToBase64String(rawDataType.getFloat(), true);
             } catch (EncoderException e) {
                 throw new PsiMsConverterException("Could not create base 64 encoded string!");
             }
