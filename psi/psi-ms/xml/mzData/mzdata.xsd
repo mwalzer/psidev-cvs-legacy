@@ -286,7 +286,6 @@
                 </xs:element>
             </xs:choice>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:int" use="required"/>
     </xs:complexType>
     <xs:complexType name="supDataBinaryType">
         <xs:sequence>
