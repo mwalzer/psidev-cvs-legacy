@@ -8,9 +8,6 @@
  */
 package org.psi.ms.test;
 
-import org.exolab.castor.xml.MarshalException;
-import org.exolab.castor.xml.ValidationException;
-import org.psi.ms.converter.DtaReader;
 import org.psi.ms.converter.DtaSetConverter;
 import org.psi.ms.helper.PsiMsConverterException;
 import org.psi.ms.model.MzData;
@@ -23,13 +20,10 @@ import java.io.IOException;
  */
 public class TestDtaSetConverter {
 
-    public static void main(String[] argv) throws IOException, PsiMsConverterException, ValidationException, MarshalException {
+    public static void main(String[] argv) throws IOException, PsiMsConverterException {
         DtaSetConverter dtaSetConverter = new DtaSetConverter();
         MzData mzData = new MzData();
-        dtaSetConverter = new DtaSetConverter(DtaReader.XML_ELEMENTS);
+        dtaSetConverter = new DtaSetConverter();
         dtaSetConverter.convertDirectory(argv[0], argv[1], mzData);
-        mzData = new MzData();
-        dtaSetConverter = new DtaSetConverter(DtaReader.BASE64);
-        dtaSetConverter.convertDirectory(argv[0], argv[1] + "_base64", mzData);
     }
 }
