@@ -53,6 +53,14 @@ public class Test implements java.io.Serializable {
         _dataProcessingList = new Vector();
         _testParamList = new Vector();
         _testUserParamList = new Vector();
+
+        DataProcessing dataProcessing = new DataProcessing();
+        addDataProcessing(dataProcessing);
+
+        Software software = new Software();
+        software.setName("PSI-MS .dta/.zta converter");
+        software.setVersion("1.00");
+        dataProcessing.setSoftware(software);
     } //-- org.psi.ms.model.Test()
 
 
