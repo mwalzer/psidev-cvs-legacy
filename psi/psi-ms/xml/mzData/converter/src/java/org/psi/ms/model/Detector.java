@@ -23,7 +23,7 @@ public class Detector implements java.io.Serializable {
     /**
      * Type of detection for this data set (controlled).
      */
-    private Type _type;
+    private Type _type = Type.OTHER;
     /**
      * This element holds additional data or annotation
      * information. Only controlled name values are allowed here.

@@ -41,11 +41,13 @@ public class MzData implements java.io.Serializable {
     private org.psi.ms.model.Desc _desc;
 
     /**
+     * List of acquisitions.
      * This is the actual peak list data. All that is stored here
      * is the actual data, all descriptive information is in the
      * desc section.
      */
-    private org.psi.ms.model.Raw _raw;
+    private org.psi.ms.model.AcquisitionList _acquisitionList;
+
 
 
     //----------------/
@@ -115,16 +117,17 @@ public class MzData implements java.io.Serializable {
     } //-- org.psi.ms.model.Desc getDesc()
 
     /**
-     * Returns the value of field 'raw'. The field 'raw' has the
-     * following description: This is the actual peak list data.
-     * All that is stored here is the actual data, all descriptive
-     * information is in the desc section.
+     * Returns the value of field 'acquisitionList'. The field
+     * 'acquisitionList' has the following description: List of
+     * acquisitions.
      *
-     * @return the value of field 'raw'.
+     * @return the value of field 'acquisitionList'.
      */
-    public org.psi.ms.model.Raw getRaw() {
-        return this._raw;
-    } //-- org.psi.ms.model.Raw getRaw()
+    public org.psi.ms.model.AcquisitionList getAcquisitionList() {
+        if (_acquisitionList == null)
+            _acquisitionList = new AcquisitionList();
+        return this._acquisitionList;
+    } //-- org.psi.ms.model.AcquisitionList getAcquisitionList()
 
     /**
      * Returns the value of field 'version'.
@@ -150,16 +153,15 @@ public class MzData implements java.io.Serializable {
     } //-- void setDesc(org.psi.ms.model.Desc)
 
     /**
-     * Sets the value of field 'raw'. The field 'raw' has the
-     * following description: This is the actual peak list data.
-     * All that is stored here is the actual data, all descriptive
-     * information is in the desc section.
+     * Sets the value of field 'acquisitionList'. The field
+     * 'acquisitionList' has the following description: List of
+     * acquisitions.
      *
-     * @param raw the value of field 'raw'.
+     * @param acquisitionList the value of field 'acquisitionList'.
      */
-    public void setRaw(org.psi.ms.model.Raw raw) {
-        this._raw = raw;
-    } //-- void setRaw(org.psi.ms.model.Raw)
+    public void setAcquisitionList(org.psi.ms.model.AcquisitionList acquisitionList) {
+        this._acquisitionList = acquisitionList;
+    } //-- void setAcquisitionList(org.psi.ms.model.AcquisitionList)
 
     /**
      * Sets the value of field 'version'.

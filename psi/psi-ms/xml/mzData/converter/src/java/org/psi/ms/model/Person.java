@@ -22,15 +22,15 @@ public class Person implements java.io.Serializable {
     /**
      * Field _name
      */
-    private String _name;
+    private String _name = "";
     /**
      * Field _institution
      */
-    private String _institution;
+    private String _institution = "";
     /**
      * Field _contactInfo
      */
-    private String _contactInfo;
+    private String _contactInfo = "";
 
 
     //----------------/

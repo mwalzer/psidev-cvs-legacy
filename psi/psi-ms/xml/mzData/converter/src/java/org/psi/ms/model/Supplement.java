@@ -34,6 +34,10 @@ public class Supplement implements java.io.Serializable {
      * element.
      */
     private DataArray _dataArray;
+    /**
+     * The descriptive information for this supplemental data entry.
+     */
+    private SupDesc supDesc;
 
     //----------------/
     //- Constructors -/
@@ -60,6 +64,14 @@ public class Supplement implements java.io.Serializable {
     public DataArray getDataArray() {
         return this._dataArray;
     } //-- org.psi.ms.model.DataArray getDataArray()
+
+    /**
+     * Returns the descriptive information for this supplemental data entry.
+     * @return the descriptive information for this supplemental data entry.
+     */
+    public SupDesc getSupDesc() {
+        return supDesc;
+    }
 
     /**
      * Returns the value of field 'id'.
@@ -89,6 +101,14 @@ public class Supplement implements java.io.Serializable {
     public void setDataArray(DataArray dataArray) {
         this._dataArray = dataArray;
     } //-- void setDataArray(org.psi.ms.model.DataArray)
+
+    /**
+     * Sets the descriptive information for this supplemental data entry.
+     * @param supDesc the descriptive information for this supplemental data entry.
+     */
+    public void setSupDesc(SupDesc supDesc) {
+        this.supDesc = supDesc;
+    }
 
     /**
      * Sets the value of field 'id'.

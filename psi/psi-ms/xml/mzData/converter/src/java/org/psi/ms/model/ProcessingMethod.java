@@ -49,7 +49,7 @@ public class ProcessingMethod implements java.io.Serializable {
     /**
      * The type of peak processing performed.
      */
-    private String _peakProcessing;
+    private String _peakProcessing = "";
 
 
     //----------------/

@@ -23,7 +23,7 @@ public class Analyzer implements java.io.Serializable {
     /**
      * Mass analyzer type (controlled)
      */
-    private Type _type;
+    private Type _type = Type.OTHER;
     /**
      * Base mass analyzer resolution. This is defined as full peak
      * width at half maximum intensity divided by mass. This

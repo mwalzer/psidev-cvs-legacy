@@ -21,14 +21,6 @@ import java.util.Vector;
  */
 public class AcqDesc implements java.io.Serializable {
     /**
-     * Field _id
-     */
-    private int _id;
-    /**
-     * keeps track of state for field: _id
-     */
-    private boolean _has_id;
-    /**
      * Settings for this specific acquisition.
      */
     private AcqSettings _acqSettings;
@@ -226,15 +218,6 @@ public class AcqDesc implements java.io.Serializable {
     } //-- int getCommentCount()
 
     /**
-     * Returns the value of field 'id'.
-     *
-     * @return the value of field 'id'.
-     */
-    public int getId() {
-        return this._id;
-    } //-- int getId()
-
-    /**
      * Returns the value of field 'precursorList'. The field
      * 'precursorList' has the following description: List of
      * precursor ions for the current acquisition.
@@ -267,13 +250,6 @@ public class AcqDesc implements java.io.Serializable {
     public Summary getSummary() {
         return this._summary;
     } //-- org.psi.ms.model.Summary getSummary()
-
-    /**
-     * Method hasId
-     */
-    public boolean hasId() {
-        return this._has_id;
-    } //-- boolean hasId()
 
     /**
      * Method removeAcqParam
@@ -390,16 +366,6 @@ public class AcqDesc implements java.io.Serializable {
             _commentList.addElement(commentArray[i]);
         }
     } //-- void setComment(java.lang.String)
-
-    /**
-     * Sets the value of field 'id'.
-     *
-     * @param id the value of field 'id'.
-     */
-    public void setId(int id) {
-        this._id = id;
-        this._has_id = true;
-    } //-- void setId(int)
 
     /**
      * Sets the value of field 'precursorList'. The field

@@ -24,7 +24,7 @@ public class InstrumentCommonSettings implements java.io.Serializable {
     /**
      * Descriptive name of the instrument
      */
-    private String _instName;
+    private String _instName = "";
     /**
      * Invariant ion source information
      */
@@ -128,6 +128,8 @@ public class InstrumentCommonSettings implements java.io.Serializable {
      * @return the value of field 'analyzer'.
      */
     public Analyzer getAnalyzer() {
+        if (_analyzer == null)
+            _analyzer = new Analyzer();
         return this._analyzer;
     } //-- org.psi.ms.model.Analyzer getAnalyzer()
 
@@ -138,6 +140,8 @@ public class InstrumentCommonSettings implements java.io.Serializable {
      * @return the value of field 'detector'.
      */
     public Detector getDetector() {
+        if (_detector == null)
+            _detector = new Detector();
         return this._detector;
     } //-- org.psi.ms.model.Detector getDetector()
 
@@ -227,6 +231,8 @@ public class InstrumentCommonSettings implements java.io.Serializable {
      * @return the value of field 'source'.
      */
     public Source getSource() {
+        if (_source == null)
+            _source = new Source();
         return this._source;
     } //-- org.psi.ms.model.Source getSource()
 

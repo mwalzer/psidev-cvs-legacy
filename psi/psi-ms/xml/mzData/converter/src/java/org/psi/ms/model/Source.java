@@ -23,7 +23,7 @@ public class Source implements java.io.Serializable {
     /**
      * Type of ion source (controlled)
      */
-    private Type _type;
+    private Type _type = Type.OTHER;
     /**
      * This element holds additional data or annotation
      * information. Only controlled name values are allowed here.

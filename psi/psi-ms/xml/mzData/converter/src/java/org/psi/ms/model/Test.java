@@ -196,6 +196,8 @@ public class Test implements java.io.Serializable {
      * @return the value of field 'processingMethod'.
      */
     public ProcessingMethod getProcessingMethod() {
+        if (_processingMethod == null)
+            _processingMethod = new ProcessingMethod();
         return this._processingMethod;
     } //-- org.psi.ms.model.ProcessingMethod getProcessingMethod()
 

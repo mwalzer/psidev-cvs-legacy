@@ -24,7 +24,7 @@ public class Admin implements java.io.Serializable {
     /**
      * Field _sampleName
      */
-    private String _sampleName;
+    private String _sampleName = "";
     /**
      * Person person for this dataset.
      */
@@ -86,6 +86,8 @@ public class Admin implements java.io.Serializable {
      * @return the value of field 'contact'.
      */
     public Person getContact() {
+        if (_contact == null)
+            _contact = new Person();
         return this._contact;
     } //-- org.psi.ms.model.Person getContact()
 
