@@ -11,25 +11,51 @@ package org.psi.ms.model;
 //- Imported classes and packages -/
 //---------------------------------/
 
+import org.exolab.castor.xml.MarshalException;
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
+import org.exolab.castor.xml.ValidationException;
+import org.xml.sax.ContentHandler;
 
+import java.io.IOException;
+import java.io.Reader;
+import java.io.Serializable;
+import java.io.Writer;
 import java.util.Vector;
 import java.util.Hashtable;
 
 /**
- * Invariant ion source information
+ * InstrumentCommonSettings information common to all acquisitions is stored in
+ * this section.
  *
  * @version $Revision$ $Date$
  */
-public class Source implements java.io.Serializable {
+public class InstrumentAcqSettings implements Serializable {
     /**
-     * Type of ion source (controlled)
+     * Type of acquisition represented by the peak list (controlled)
      */
-    private Type _type;
+    private AcqType _acqType;
+    /**
+     * Number of stages of mass spectrometry performed to generate
+     * the peak list (MS^n).
+     */
+    private int _msLevel;
+    /**
+     * keeps track of state for field: _msLevel
+     */
+    private boolean _has_msLevel;
+    /**
+     * Polarity of the ionization/mass analyzer (controlled).
+     */
+    private Polarity _polarity;
+    /**
+     * Range in m/z units of the mass analysis.
+     */
+    private MzRange _mzRange;
     /**
      * This element holds additional data or annotation
-     * information. Only controlled name values are allowed here.
+     * information. It is named, has a value and optionally a
+     * description.
      */
     private java.util.Vector _instParamList;
     /**
@@ -44,11 +70,11 @@ public class Source implements java.io.Serializable {
     //- Constructors -/
     //----------------/
 
-    public Source() {
+    public InstrumentAcqSettings() {
         super();
         _instParamList = new Vector();
         _instUserParamList = new Vector();
-    } //-- org.psi.ms.model.Source()
+    } //-- org.psi.ms.model.InstrumentAcqSettings()
 
 
     //-----------/
@@ -61,7 +87,7 @@ public class Source implements java.io.Serializable {
     public boolean isValid() {
         try {
             validate();
-        } catch (org.exolab.castor.xml.ValidationException vex) {
+        } catch (ValidationException vex) {
             return false;
         }
         return true;
@@ -72,8 +98,8 @@ public class Source implements java.io.Serializable {
      *
      * @param out
      */
-    public void marshal(java.io.Writer out)
-            throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+    public void marshal(Writer out)
+            throws MarshalException, ValidationException {
 
         Marshaller.marshal(this, out);
     } //-- void marshal(java.io.Writer)
@@ -83,8 +109,8 @@ public class Source implements java.io.Serializable {
      *
      * @param handler
      */
-    public void marshal(org.xml.sax.ContentHandler handler)
-            throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
+    public void marshal(ContentHandler handler)
+            throws IOException, MarshalException, ValidationException {
 
         Marshaller.marshal(this, handler);
     } //-- void marshal(org.xml.sax.ContentHandler)
@@ -94,16 +120,16 @@ public class Source implements java.io.Serializable {
      *
      * @param reader
      */
-    public static org.psi.ms.model.Source unmarshal(java.io.Reader reader)
-            throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
-        return (org.psi.ms.model.Source) Unmarshaller.unmarshal(org.psi.ms.model.Source.class, reader);
-    } //-- org.psi.ms.model.Source unmarshal(java.io.Reader)
+    public static InstrumentAcqSettings unmarshal(Reader reader)
+            throws MarshalException, ValidationException {
+        return (InstrumentAcqSettings) Unmarshaller.unmarshal(InstrumentAcqSettings.class, reader);
+    } //-- org.psi.ms.model.InstrumentAcqSettings unmarshal(java.io.Reader)
 
     /**
      * Method validate
      */
     public void validate()
-            throws org.exolab.castor.xml.ValidationException {
+            throws ValidationException {
         org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
         validator.validate(this);
     } //-- void validate()
@@ -163,6 +189,17 @@ public class Source implements java.io.Serializable {
     public java.util.Enumeration enumerateInstUserParam() {
         return _instUserParamList.elements();
     } //-- java.util.Enumeration enumerateInstUserParam()
+
+    /**
+     * Returns the value of field 'acqType'. The field 'acqType'
+     * has the following description: Type of acquisition
+     * represented by the peak list (controlled).
+     *
+     * @return the value of field 'acqType'.
+     */
+    public AcqType getAcqType() {
+        return this._acqType;
+    } //-- AcqType getAcqType()
 
     /**
      * Method getInstParam
@@ -233,14 +270,44 @@ public class Source implements java.io.Serializable {
     } //-- int getInstUserParamCount()
 
     /**
-     * Returns the value of field 'type'. The field 'type' has the
-     * following description: Type of ion source (controlled)
+     * Returns the value of field 'msLevel'. The field 'msLevel'
+     * has the following description: Number of stages of mass
+     * spectrometry performed to generate the peak list (MS^n).
      *
-     * @return the value of field 'type'.
+     * @return the value of field 'msLevel'.
      */
-    public Type getType() {
-        return this._type;
-    } //-- Type getType()
+    public int getMsLevel() {
+        return this._msLevel;
+    } //-- int getMsLevel()
+
+    /**
+     * Returns the value of field 'mzRange'. The field 'mzRange'
+     * has the following description: Range in m/z units of the
+     * mass analysis.
+     *
+     * @return the value of field 'mzRange'.
+     */
+    public MzRange getMzRange() {
+        return this._mzRange;
+    } //-- org.psi.ms.model.MzRange getMzRange()
+
+    /**
+     * Returns the value of field 'polarity'. The field 'polarity'
+     * has the following description: Polarity of the
+     * ionization/mass analyzer (controlled).
+     *
+     * @return the value of field 'polarity'.
+     */
+    public Polarity getPolarity() {
+        return this._polarity;
+    } //-- Polarity getPolarity()
+
+    /**
+     * Method hasMsLevel
+     */
+    public boolean hasMsLevel() {
+        return this._has_msLevel;
+    } //-- boolean hasMsLevel()
 
     /**
      * Method removeAllInstParam
@@ -277,6 +344,17 @@ public class Source implements java.io.Serializable {
         _instUserParamList.removeElementAt(index);
         return (InstUserParam) obj;
     } //-- org.psi.ms.model.InstUserParam removeInstUserParam(int)
+
+    /**
+     * Sets the value of field 'acqType'. The field 'acqType' has
+     * the following description: Type of acquisition represented
+     * by the peak list (controlled).
+     *
+     * @param acqType the value of field 'acqType'.
+     */
+    public void setAcqType(AcqType acqType) {
+        this._acqType = acqType;
+    } //-- void setAcqType(AcqType)
 
     /**
      * Method setInstParam
@@ -335,21 +413,45 @@ public class Source implements java.io.Serializable {
     } //-- void setInstUserParam(org.psi.ms.model.InstUserParam)
 
     /**
-     * Sets the value of field 'type'. The field 'type' has the
-     * following description: Type of ion source (controlled)
+     * Sets the value of field 'msLevel'. The field 'msLevel' has
+     * the following description: Number of stages of mass
+     * spectrometry performed to generate the peak list (MS^n).
      *
-     * @param type the value of field 'type'.
+     * @param msLevel the value of field 'msLevel'.
      */
-    public void setType(Type type) {
-        this._type = type;
-    } //-- void setType(Type)
+    public void setMsLevel(int msLevel) {
+        this._msLevel = msLevel;
+        this._has_msLevel = true;
+    } //-- void setMsLevel(int)
 
     /**
-     * Class Type.
+     * Sets the value of field 'mzRange'. The field 'mzRange' has
+     * the following description: Range in m/z units of the mass
+     * analysis.
+     *
+     * @param mzRange the value of field 'mzRange'.
+     */
+    public void setMzRange(MzRange mzRange) {
+        this._mzRange = mzRange;
+    } //-- void setMzRange(org.psi.ms.model.MzRange)
+
+    /**
+     * Sets the value of field 'polarity'. The field 'polarity' has
+     * the following description: Polarity of the ionization/mass
+     * analyzer (controlled).
+     *
+     * @param polarity the value of field 'polarity'.
+     */
+    public void setPolarity(Polarity polarity) {
+        this._polarity = polarity;
+    } //-- void setPolarity(Polarity)
+
+    /**
+     * Class AcqType.
      *
      * @version $Revision$ $Date$
      */
-    public static class Type implements java.io.Serializable {
+    public static class AcqType implements java.io.Serializable {
 
 
           //--------------------------/
@@ -357,64 +459,84 @@ public class Source implements java.io.Serializable {
         //--------------------------/
 
         /**
-         * The ESI type
+         * The full type
          */
-        public static final int ESI_TYPE = 0;
+        public static final int FULL_TYPE = 0;
 
         /**
-         * The instance of the ESI type
+         * The instance of the full type
          */
-        public static final Type ESI = new Type(ESI_TYPE, "ESI");
+        public static final AcqType FULL = new AcqType(FULL_TYPE, "full");
 
         /**
-         * The uESI type
+         * The zoom type
          */
-        public static final int UESI_TYPE = 1;
+        public static final int ZOOM_TYPE = 1;
 
         /**
-         * The instance of the uESI type
+         * The instance of the zoom type
          */
-        public static final Type UESI = new Type(UESI_TYPE, "uESI");
+        public static final AcqType ZOOM = new AcqType(ZOOM_TYPE, "zoom");
 
         /**
-         * The nESI type
+         * The SIM type
          */
-        public static final int NESI_TYPE = 2;
+        public static final int SIM_TYPE = 2;
 
         /**
-         * The instance of the nESI type
+         * The instance of the SIM type
          */
-        public static final Type NESI = new Type(NESI_TYPE, "nESI");
+        public static final AcqType SIM = new AcqType(SIM_TYPE, "SIM");
 
         /**
-         * The MALDI type
+         * The SRM type
          */
-        public static final int MALDI_TYPE = 3;
+        public static final int SRM_TYPE = 3;
 
         /**
-         * The instance of the MALDI type
+         * The instance of the SRM type
          */
-        public static final Type MALDI = new Type(MALDI_TYPE, "MALDI");
+        public static final AcqType SRM = new AcqType(SRM_TYPE, "SRM");
 
         /**
-         * The APCI type
+         * The MRM type
          */
-        public static final int APCI_TYPE = 4;
+        public static final int MRM_TYPE = 4;
 
         /**
-         * The instance of the APCI type
+         * The instance of the MRM type
          */
-        public static final Type APCI = new Type(APCI_TYPE, "APCI");
+        public static final AcqType MRM = new AcqType(MRM_TYPE, "MRM");
 
         /**
-         * The other type
+         * The Q1 type
          */
-        public static final int OTHER_TYPE = 5;
+        public static final int Q1_TYPE = 5;
 
         /**
-         * The instance of the other type
+         * The instance of the Q1 type
          */
-        public static final Type OTHER = new Type(OTHER_TYPE, "other");
+        public static final AcqType Q1 = new AcqType(Q1_TYPE, "Q1");
+
+        /**
+         * The Q3 type
+         */
+        public static final int Q3_TYPE = 6;
+
+        /**
+         * The instance of the Q3 type
+         */
+        public static final AcqType Q3 = new AcqType(Q3_TYPE, "Q3");
+
+        /**
+         * The ICR type
+         */
+        public static final int ICR_TYPE = 7;
+
+        /**
+         * The instance of the ICR type
+         */
+        public static final AcqType ICR = new AcqType(ICR_TYPE, "ICR");
 
         /**
          * Field _memberTable
@@ -436,11 +558,11 @@ public class Source implements java.io.Serializable {
          //- Constructors -/
         //----------------/
 
-        private Type(int type, java.lang.String value) {
+        private AcqType(int type, java.lang.String value) {
             super();
             this.type = type;
             this.stringValue = value;
-        } //-- Type(int, java.lang.String)
+        } //-- AcqType(int, java.lang.String)
 
 
           //-----------/
@@ -449,7 +571,7 @@ public class Source implements java.io.Serializable {
 
         /**
          * Method enumerateReturns an enumeration of all possible
-         * instances of Type
+         * instances of AcqType
          */
         public static java.util.Enumeration enumerate()
         {
@@ -457,7 +579,8 @@ public class Source implements java.io.Serializable {
         } //-- java.util.Enumeration enumerate()
 
         /**
-         * Method getTypeReturns the type of this Type
+         * Method getTypeReturns the type of this
+         * AcqType
          */
         public int getType()
         {
@@ -470,18 +593,20 @@ public class Source implements java.io.Serializable {
         private static java.util.Hashtable init()
         {
             Hashtable members = new Hashtable();
-            members.put("ESI", ESI);
-            members.put("uESI", UESI);
-            members.put("nESI", NESI);
-            members.put("MALDI", MALDI);
-            members.put("APCI", APCI);
-            members.put("other", OTHER);
+            members.put("full", FULL);
+            members.put("zoom", ZOOM);
+            members.put("SIM", SIM);
+            members.put("SRM", SRM);
+            members.put("MRM", MRM);
+            members.put("Q1", Q1);
+            members.put("Q3", Q3);
+            members.put("ICR", ICR);
             return members;
         } //-- java.util.Hashtable init()
 
         /**
          * Method toStringReturns the String representation of this
-         * Type
+         * AcqType
          */
         public java.lang.String toString()
         {
@@ -489,21 +614,154 @@ public class Source implements java.io.Serializable {
         } //-- java.lang.String toString()
 
         /**
-         * Method valueOfReturns a new Type based on the
-         * given String value.
+         * Method valueOfReturns a new
+         * AcqType based on the given
+         * String value.
          *
          * @param string
          */
-        public static Type valueOf(java.lang.String string)
+        public static AcqType valueOf(java.lang.String string)
         {
             java.lang.Object obj = null;
             if (string != null) obj = _memberTable.get(string);
             if (obj == null) {
-                String err = "'" + string + "' is not a valid Type";
+                String err = "'" + string + "' is not a valid AcqType";
                 throw new IllegalArgumentException(err);
             }
-            return (Type) obj;
-        } //-- Type valueOf(java.lang.String)
+            return (AcqType) obj;
+        } //-- AcqType valueOf(java.lang.String)
+
+    }
+
+    /**
+     * Class Polarity.
+     *
+     * @version $Revision$ $Date$
+     */
+    public static class Polarity implements java.io.Serializable {
+
+
+          //--------------------------/
+         //- Class/Member Variables -/
+        //--------------------------/
+
+        /**
+         * The + type
+         */
+        public static final int VALUE_0_TYPE = 0;
+
+        /**
+         * The instance of the + type
+         */
+        public static final Polarity VALUE_0 = new Polarity(VALUE_0_TYPE, "+");
+
+        /**
+         * The - type
+         */
+        public static final int VALUE_1_TYPE = 1;
+
+        /**
+         * The instance of the - type
+         */
+        public static final Polarity VALUE_1 = new Polarity(VALUE_1_TYPE, "-");
+
+        /**
+         * The any type
+         */
+        public static final int VALUE_2_TYPE = 2;
+
+        /**
+         * The instance of the any type
+         */
+        public static final Polarity VALUE_2 = new Polarity(VALUE_2_TYPE, "any");
+
+        /**
+         * Field _memberTable
+         */
+        private static java.util.Hashtable _memberTable = init();
+
+        /**
+         * Field type
+         */
+        private int type = -1;
+
+        /**
+         * Field stringValue
+         */
+        private java.lang.String stringValue = null;
+
+
+          //----------------/
+         //- Constructors -/
+        //----------------/
+
+        private Polarity(int type, java.lang.String value) {
+            super();
+            this.type = type;
+            this.stringValue = value;
+        } //-- Polarity(int, java.lang.String)
+
+
+          //-----------/
+         //- Methods -/
+        //-----------/
+
+        /**
+         * Method enumerateReturns an enumeration of all possible
+         * instances of Polarity
+         */
+        public static java.util.Enumeration enumerate()
+        {
+            return _memberTable.elements();
+        } //-- java.util.Enumeration enumerate()
+
+        /**
+         * Method getTypeReturns the type of this
+         * Polarity
+         */
+        public int getType()
+        {
+            return this.type;
+        } //-- int getType()
+
+        /**
+         * Method init
+         */
+        private static java.util.Hashtable init()
+        {
+            Hashtable members = new Hashtable();
+            members.put("+", VALUE_0);
+            members.put("-", VALUE_1);
+            members.put("any", VALUE_2);
+            return members;
+        } //-- java.util.Hashtable init()
+
+        /**
+         * Method toStringReturns the String representation of this
+         * Polarity
+         */
+        public java.lang.String toString()
+        {
+            return this.stringValue;
+        } //-- java.lang.String toString()
+
+        /**
+         * Method valueOfReturns a new
+         * Polarity based on the given
+         * String value.
+         *
+         * @param string
+         */
+        public static Polarity valueOf(java.lang.String string)
+        {
+            java.lang.Object obj = null;
+            if (string != null) obj = _memberTable.get(string);
+            if (obj == null) {
+                String err = "'" + string + "' is not a valid Polarity";
+                throw new IllegalArgumentException(err);
+            }
+            return (Polarity) obj;
+        } //-- Polarity valueOf(java.lang.String)
 
     }
 }

@@ -15,8 +15,6 @@ import org.exolab.castor.mapping.Mapping;
 import org.exolab.castor.mapping.MappingException;
 import org.psi.ms.model.*;
 import org.psi.ms.model.types.SourceTypeTypeType;
-import org.psi.ms.model.types.AnalyzerTypeTypeType;
-import org.psi.ms.model.types.DetectorTypeTypeType;
 import org.psi.ms.converter.DtaReader;
 import org.xml.sax.InputSource;
 
@@ -75,19 +73,19 @@ public class TestDtaReader {
         admin.setContact(contact);
 
         // Todo: this information must be provided by the user
-        Instrument instrument = new Instrument();
+        InstrumentCommonSettings instrument = new InstrumentCommonSettings();
         instrument.setInstName("unknown");
         Source source = new Source();
-        source.setType(SourceTypeTypeType.OTHER);
+        source.setType(Source.Type.OTHER);
         instrument.setSource(source);
         Analyzer analyzer = new Analyzer();
-        analyzer.setType(AnalyzerTypeTypeType.OTHER);
+        analyzer.setType(Analyzer.Type.OTHER);
         float unknown = -1;
         analyzer.setResolution(unknown);
         analyzer.setAccuracy(unknown);
         instrument.setAnalyzer(analyzer);
         Detector detector = new Detector();
-        detector.setType(DetectorTypeTypeType.OTHER);
+        detector.setType(Detector.Type.OTHER);
         instrument.setDetector(detector);
         desc.setInstrument(instrument);
 
