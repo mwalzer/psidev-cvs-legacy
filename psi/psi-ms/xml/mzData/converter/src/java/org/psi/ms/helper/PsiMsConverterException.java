@@ -17,4 +17,13 @@ public class PsiMsConverterException extends Exception {
     public PsiMsConverterException(String message) {
         super(message);
     }
+
+    public PsiMsConverterException(String message, Throwable throwable) {
+        super(message, throwable);
+    }
+
+    public PsiMsConverterException(Throwable throwable) {
+        super(throwable);
+    }
+
 }
