@@ -41,15 +41,15 @@ public class ProcessingMethod implements java.io.Serializable {
     /**
      * Field _peakThreshold
      */
-    private float _peakThreshold;
+    private float _peakThreshold = -1;
     /**
      * keeps track of state for field: _peakThreshold
      */
-    private boolean _has_peakThreshold;
+    private boolean _has_peakThreshold = false;
     /**
      * The type of peak processing performed.
      */
-    private String _peakProcessing = "";
+    private String _peakProcessing = "?";
 
 
     //----------------/
