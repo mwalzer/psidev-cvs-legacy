@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Jul 23, 2003
  * Time: 6:19:32 PM
  */
@@ -21,7 +21,7 @@ import java.io.File;
 
 /**
  *
- * @author krunte
+ * @author Kai Runte
  */
 public class TestDtaSetConverter {
 

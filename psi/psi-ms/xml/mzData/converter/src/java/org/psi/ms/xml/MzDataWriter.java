@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Sep 10, 2003
  * Time: 6:42:23 PM
  */
@@ -29,7 +29,7 @@ import java.util.zip.ZipOutputStream;
 
 /**
  *
- * @author krunte
+ * @author Kai Runte
  */
 public class MzDataWriter implements ExporterI {
 

@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Nov 20, 2003
  * Time: 5:27:02 PM
  */
@@ -12,7 +12,7 @@ import java.util.Hashtable;
 
 /**
  *
- * @author krunte
+ * @author Kai Runte
  */
 public final class ProvidedDataItem {
 

@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Oct 21, 2003
  * Time: 5:11:45 PM
  */

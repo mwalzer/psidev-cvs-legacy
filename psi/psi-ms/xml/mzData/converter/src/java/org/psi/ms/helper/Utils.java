@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Jul 22, 2003
  * Time: 11:00:54 AM
  */
@@ -19,7 +19,7 @@ import java.util.Vector;
 
 /**
  *
- * @author krunte
+ * @author Kai Runte
  */
 public class Utils {
 

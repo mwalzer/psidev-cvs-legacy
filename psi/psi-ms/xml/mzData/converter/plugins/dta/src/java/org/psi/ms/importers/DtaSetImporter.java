@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Jul 23, 2003
  * Time: 5:24:22 PM
  */
@@ -30,7 +30,7 @@ import java.util.regex.Matcher;
  * into a single peaklist XML document. Per default the arrays are
  * stored in the space-saving base64 format.
  *
- * @author krunte
+ * @author Kai Runte
  */
 public class DtaSetImporter implements ImporterI {
 

@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Sep 11, 2003
  * Time: 5:26:33 PM
  */
@@ -13,7 +13,7 @@ import java.net.URI;
 
 /**
  * 
- * @author krunte
+ * @author Kai Runte
  */
 public class MultiTypeValue {
     /**

@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Dec 1, 2003
  * Time: 10:52:47 AM
  */
@@ -16,7 +16,7 @@ import java.io.IOException;
 
 /**
  * 
- * @author krunte
+ * @author Kai Runte
  */
 public interface ExporterI {
     void initialize(MzData mzData, int acquisitionCount) throws PsiMsConverterException;

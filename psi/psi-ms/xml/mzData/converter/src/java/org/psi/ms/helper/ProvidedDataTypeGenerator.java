@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Nov 20, 2003
  * Time: 6:12:15 PM
  */
@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 
 /**
  * 
- * @author krunte
+ * @author Kai Runte
  */
 public class ProvidedDataTypeGenerator {
 

@@ -2,7 +2,7 @@
  * $Id$
  *
  * Created by IntelliJ IDEA.
- * User: krunte
+ * User: Kai Runte
  * Date: Dec 4, 2003
  * Time: 2:07:25 PM
  */
@@ -23,7 +23,7 @@ import java.util.regex.Matcher;
 
 /**
  *
- * @author krunte
+ * @author Kai Runte
  */
 public class MascotGenericImporter implements ImporterI {
 
