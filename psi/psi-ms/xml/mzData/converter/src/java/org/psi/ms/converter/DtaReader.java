@@ -145,9 +145,9 @@ public class DtaReader {
 
     private int addXMLArrays(Acquisition acquisition, BufferedReader bufferedReader) {
         StringTokenizer stringTokenizer;
-        MzArray mzArray = new MzArray();
+        RawDataType mzArray = new RawDataType();
         acquisition.setMzArray(mzArray);
-        IntenArray intenArray = new IntenArray();
+        RawDataType intenArray = new RawDataType();
         acquisition.setIntenArray(intenArray);
 
         String line;

@@ -53,18 +53,6 @@ public abstract class MzArrayBinaryType implements java.io.Serializable {
     } //-- org.psi.ms.model.Data getData()
 
     /**
-     * Method isValid
-     */
-    public boolean isValid() {
-        try {
-            validate();
-        } catch (org.exolab.castor.xml.ValidationException vex) {
-            return false;
-        }
-        return true;
-    } //-- boolean isValid()
-
-    /**
      * Sets the value of field 'data'.
      *
      * @param data the value of field 'data'.
@@ -72,14 +60,5 @@ public abstract class MzArrayBinaryType implements java.io.Serializable {
     public void setData(org.psi.ms.model.Data data) {
         this._data = data;
     } //-- void setData(org.psi.ms.model.Data)
-
-    /**
-     * Method validate
-     */
-    public void validate()
-            throws org.exolab.castor.xml.ValidationException {
-        org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
-        validator.validate(this);
-    } //-- void validate()
 
 }

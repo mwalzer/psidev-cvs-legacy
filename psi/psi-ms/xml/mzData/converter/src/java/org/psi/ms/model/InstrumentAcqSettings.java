@@ -11,16 +11,7 @@ package org.psi.ms.model;
 //- Imported classes and packages -/
 //---------------------------------/
 
-import org.exolab.castor.xml.MarshalException;
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
-import org.exolab.castor.xml.ValidationException;
-import org.xml.sax.ContentHandler;
-
-import java.io.IOException;
-import java.io.Reader;
 import java.io.Serializable;
-import java.io.Writer;
 import java.util.Hashtable;
 import java.util.Vector;
 
@@ -80,59 +71,6 @@ public class InstrumentAcqSettings implements Serializable {
     //-----------/
     //- Methods -/
     //-----------/
-
-    /**
-     * Method isValid
-     */
-    public boolean isValid() {
-        try {
-            validate();
-        } catch (ValidationException vex) {
-            return false;
-        }
-        return true;
-    } //-- boolean isValid()
-
-    /**
-     * Method marshal
-     *
-     * @param out
-     */
-    public void marshal(Writer out)
-            throws MarshalException, ValidationException {
-
-        Marshaller.marshal(this, out);
-    } //-- void marshal(java.io.Writer)
-
-    /**
-     * Method marshal
-     *
-     * @param handler
-     */
-    public void marshal(ContentHandler handler)
-            throws IOException, MarshalException, ValidationException {
-
-        Marshaller.marshal(this, handler);
-    } //-- void marshal(org.xml.sax.ContentHandler)
-
-    /**
-     * Method unmarshal
-     *
-     * @param reader
-     */
-    public static InstrumentAcqSettings unmarshal(Reader reader)
-            throws MarshalException, ValidationException {
-        return (InstrumentAcqSettings) Unmarshaller.unmarshal(InstrumentAcqSettings.class, reader);
-    } //-- org.psi.ms.model.InstrumentAcqSettings unmarshal(java.io.Reader)
-
-    /**
-     * Method validate
-     */
-    public void validate()
-            throws ValidationException {
-        org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
-        validator.validate(this);
-    } //-- void validate()
 
     /**
      * Method addInstParam

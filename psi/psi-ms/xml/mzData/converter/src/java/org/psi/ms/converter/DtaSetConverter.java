@@ -102,7 +102,7 @@ public class DtaSetConverter {
 
         // Todo: this information must be provided by the user
         admin.setSampleName("?");
-        Contact contact = new Contact();
+        Person contact = new Person();
         contact.setName("Kai Runte");
         contact.setInstitution("EMBL Outstation - EBI");
         admin.setContact(contact);

@@ -11,8 +11,7 @@ package org.psi.ms.model;
 //- Imported classes and packages -/
 //---------------------------------/
 
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
+
 
 /**
  * Range in m/z units of the mass analysis.
@@ -93,40 +92,6 @@ public class MzRange implements java.io.Serializable {
     } //-- boolean hasStop()
 
     /**
-     * Method isValid
-     */
-    public boolean isValid() {
-        try {
-            validate();
-        } catch (org.exolab.castor.xml.ValidationException vex) {
-            return false;
-        }
-        return true;
-    } //-- boolean isValid()
-
-    /**
-     * Method marshal
-     *
-     * @param out
-     */
-    public void marshal(java.io.Writer out)
-            throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
-
-        Marshaller.marshal(this, out);
-    } //-- void marshal(java.io.Writer)
-
-    /**
-     * Method marshal
-     *
-     * @param handler
-     */
-    public void marshal(org.xml.sax.ContentHandler handler)
-            throws java.io.IOException, org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
-
-        Marshaller.marshal(this, handler);
-    } //-- void marshal(org.xml.sax.ContentHandler)
-
-    /**
      * Sets the value of field 'start'.
      *
      * @param start the value of field 'start'.
@@ -145,24 +110,5 @@ public class MzRange implements java.io.Serializable {
         this._stop = stop;
         this._has_stop = true;
     } //-- void setStop(int)
-
-    /**
-     * Method unmarshal
-     *
-     * @param reader
-     */
-    public static org.psi.ms.model.MzRange unmarshal(java.io.Reader reader)
-            throws org.exolab.castor.xml.MarshalException, org.exolab.castor.xml.ValidationException {
-        return (org.psi.ms.model.MzRange) Unmarshaller.unmarshal(org.psi.ms.model.MzRange.class, reader);
-    } //-- org.psi.ms.model.MzRange unmarshal(java.io.Reader)
-
-    /**
-     * Method validate
-     */
-    public void validate()
-            throws org.exolab.castor.xml.ValidationException {
-        org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
-        validator.validate(this);
-    } //-- void validate()
 
 }

@@ -105,18 +105,6 @@ public abstract class CvUserParamType implements java.io.Serializable {
     } //-- boolean hasXref()
 
     /**
-     * Method isValid
-     */
-    public boolean isValid() {
-        try {
-            validate();
-        } catch (org.exolab.castor.xml.ValidationException vex) {
-            return false;
-        }
-        return true;
-    } //-- boolean isValid()
-
-    /**
      * Sets the value of field 'cvUserParamTypeChoice'.
      *
      * @param cvUserParamTypeChoice the value of field
@@ -147,14 +135,5 @@ public abstract class CvUserParamType implements java.io.Serializable {
         this._xref = xref;
         this._has_xref = true;
     } //-- void setXref(int)
-
-    /**
-     * Method validate
-     */
-    public void validate()
-            throws org.exolab.castor.xml.ValidationException {
-        org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
-        validator.validate(this);
-    } //-- void validate()
 
 }
