@@ -115,5 +115,12 @@ public interface ImporterI {
      * This can be displayed, for example, in a list of available importers.
      * @return some information about the importer implementation.
      */
-    public String getAboutImporter();
+    public String getImporterDescription();
+
+    /**
+     * Returns the name of the importer implementation.
+     * This can be displayed, for example, in a list of available importers.
+     * @return some information about the importer implementation.
+     */
+    public String getImporterName();
 }
