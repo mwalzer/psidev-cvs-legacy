@@ -46,7 +46,7 @@ public abstract class AcqSettingsType implements java.io.Serializable {
     /**
      * Field _instrument
      */
-    private org.psi.ms.model.Instrument _instrument;
+    private org.psi.ms.model.Instrument2 _instrument;
 
     /**
      * Field _acqTime
@@ -96,10 +96,10 @@ public abstract class AcqSettingsType implements java.io.Serializable {
      * 
      * @return the value of field 'instrument'.
      */
-    public org.psi.ms.model.Instrument getInstrument()
+    public org.psi.ms.model.Instrument2 getInstrument()
     {
         return this._instrument;
-    } //-- org.psi.ms.model.Instrument getInstrument() 
+    } //-- org.psi.ms.model.Instrument2 getInstrument2()
 
     /**
      * Returns the value of field 'specType'. The field 'specType'
@@ -155,10 +155,10 @@ public abstract class AcqSettingsType implements java.io.Serializable {
      * 
      * @param instrument the value of field 'instrument'.
      */
-    public void setInstrument(org.psi.ms.model.Instrument instrument)
+    public void setInstrument(org.psi.ms.model.Instrument2 instrument)
     {
         this._instrument = instrument;
-    } //-- void setInstrument(org.psi.ms.model.Instrument) 
+    } //-- void setInstrument(org.psi.ms.model.Instrument2)
 
     /**
      * Sets the value of field 'specType'. The field 'specType' has

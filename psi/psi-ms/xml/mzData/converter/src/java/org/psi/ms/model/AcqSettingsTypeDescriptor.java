@@ -150,7 +150,7 @@ public class AcqSettingsTypeDescriptor extends org.exolab.castor.xml.util.XMLCla
             {
                 try {
                     AcqSettingsType target = (AcqSettingsType) object;
-                    target.setInstrument( (org.psi.ms.model.Instrument) value);
+                    target.setInstrument( (org.psi.ms.model.Instrument2) value);
                 }
                 catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());

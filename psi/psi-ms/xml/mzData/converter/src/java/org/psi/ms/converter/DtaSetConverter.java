@@ -85,6 +85,7 @@ public class DtaSetConverter {
         desc.setAdmin(admin);
 
         // Todo: this information must be provided by the user
+        admin.setSampleName("?");
         Contact contact = new Contact();
         contact.setName("Kai Runte");
         contact.setInstitution("EMBL Outstation - EBI");
@@ -121,9 +122,7 @@ public class DtaSetConverter {
         ProcessingMethod processingMethod = new ProcessingMethod();
         test.setProcessingMethod(processingMethod);
 
-        PeakProcessing peakProcessing = new PeakProcessing();
-        peakProcessing.setDesc("?");
-        processingMethod.setPeakProcessing(peakProcessing);
+        processingMethod.setPeakProcessing("?");
 
         return mzData;
     }
