@@ -1,5 +1,5 @@
 /*
- * This class was automatically generated with 
+ * This class was automatically generated with
  * <a href="http://www.castor.org">Castor 0.9.4.3</a>, using an XML
  * Schema.
  * $Id$
@@ -22,7 +22,7 @@ import org.exolab.castor.xml.ValidationException;
 
 /**
  * Data type for non-binary data (m/z and intensity)
- * 
+ *
  * @version $Revision$ $Date$
  */
 public abstract class RawDataType implements java.io.Serializable {
@@ -54,7 +54,7 @@ public abstract class RawDataType implements java.io.Serializable {
 
     /**
      * Method addFloat
-     * 
+     *
      * @param v_float
      */
     public void addFloat(float v_float)
@@ -65,7 +65,7 @@ public abstract class RawDataType implements java.io.Serializable {
 
     /**
      * Method addFloat
-     * 
+     *
      * @param index
      * @param v_float
      */
@@ -85,7 +85,7 @@ public abstract class RawDataType implements java.io.Serializable {
 
     /**
      * Method getFloat
-     * 
+     *
      * @param index
      */
     public float getFloat(int index)
@@ -95,7 +95,7 @@ public abstract class RawDataType implements java.io.Serializable {
         if ((index < 0) || (index > _floatList.size())) {
             throw new IndexOutOfBoundsException();
         }
-        
+
         return ((Float)_floatList.elementAt(index)).floatValue();
     } //-- float getFloat(int)
 
@@ -132,7 +132,7 @@ public abstract class RawDataType implements java.io.Serializable {
             return false;
         }
         return true;
-    } //-- boolean isValid() 
+    } //-- boolean isValid()
 
     /**
      * Method removeAllFloat
@@ -144,7 +144,7 @@ public abstract class RawDataType implements java.io.Serializable {
 
     /**
      * Method removeFloat
-     * 
+     *
      * @param index
      */
     public float removeFloat(int index)
@@ -156,7 +156,7 @@ public abstract class RawDataType implements java.io.Serializable {
 
     /**
      * Method setFloat
-     * 
+     *
      * @param index
      * @param v_float
      */
@@ -172,7 +172,7 @@ public abstract class RawDataType implements java.io.Serializable {
 
     /**
      * Method setFloat
-     * 
+     *
      * @param _floatArray
      */
     public void setFloat(float[] _floatArray)
@@ -192,6 +192,6 @@ public abstract class RawDataType implements java.io.Serializable {
     {
         org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
         validator.validate(this);
-    } //-- void validate() 
+    } //-- void validate()
 
 }

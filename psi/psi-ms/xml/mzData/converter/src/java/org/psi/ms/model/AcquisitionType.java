@@ -1,5 +1,5 @@
 /*
- * This class was automatically generated with 
+ * This class was automatically generated with
  * <a href="http://www.castor.org">Castor 0.9.4.3</a>, using an XML
  * Schema.
  * $Id$
@@ -20,7 +20,7 @@ import org.exolab.castor.xml.ValidationException;
 
 /**
  * Class AcquisitionType.
- * 
+ *
  * @version $Revision$ $Date$
  */
 public abstract class AcquisitionType implements java.io.Serializable {
@@ -143,13 +143,13 @@ public abstract class AcquisitionType implements java.io.Serializable {
 
     /**
      * Returns the value of field 'id'.
-     * 
+     *
      * @return the value of field 'id'.
      */
     public int getId()
     {
         return this._id;
-    } //-- int getId() 
+    } //-- int getId()
 
     /**
      * Method hasId
@@ -157,7 +157,7 @@ public abstract class AcquisitionType implements java.io.Serializable {
     public boolean hasId()
     {
         return this._has_id;
-    } //-- boolean hasId() 
+    } //-- boolean hasId()
 
     /**
      * Method isValid
@@ -171,7 +171,7 @@ public abstract class AcquisitionType implements java.io.Serializable {
             return false;
         }
         return true;
-    } //-- boolean isValid() 
+    } //-- boolean isValid()
 
     /**
      * Sets the value of field 'intenArray'. The field 'intenArray'
@@ -231,14 +231,14 @@ public abstract class AcquisitionType implements java.io.Serializable {
 
     /**
      * Sets the value of field 'id'.
-     * 
+     *
      * @param id the value of field 'id'.
      */
     public void setId(int id)
     {
         this._id = id;
         this._has_id = true;
-    } //-- void setId(int) 
+    } //-- void setId(int)
 
     /**
      * Method validate
@@ -248,6 +248,6 @@ public abstract class AcquisitionType implements java.io.Serializable {
     {
         org.exolab.castor.xml.Validator validator = new org.exolab.castor.xml.Validator();
         validator.validate(this);
-    } //-- void validate() 
+    } //-- void validate()
 
 }
