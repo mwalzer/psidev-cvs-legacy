@@ -125,7 +125,7 @@ public class DtaReader {
         ion.setCharge(peptideCharge.intValue());
         precursor.setIon(ion);
         Activation activation = new Activation();
-        activation.setMethod(ActivationTypeMethodType.OTHER);
+        activation.setMethod(Activation.Method.OTHER);
         precursor.setActivation(activation);
         precursor.setMsLevel(-1);
         precursor.setAcqID(-1);
