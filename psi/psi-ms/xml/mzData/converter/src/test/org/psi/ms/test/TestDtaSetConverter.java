@@ -24,8 +24,9 @@ public class TestDtaSetConverter {
 
     public static void main(String[] argv) throws IOException, PsiMsConverterException, ValidationException, MarshalException {
         DtaSetConverter dtaSetConverter = new DtaSetConverter();
-        dtaSetConverter.convertDirectory(argv[0], argv[1] + "_base64");
         dtaSetConverter = new DtaSetConverter(DtaReader.XML_ELEMENTS);
         dtaSetConverter.convertDirectory(argv[0], argv[1]);
+        dtaSetConverter = new DtaSetConverter(DtaReader.BASE64);
+        dtaSetConverter.convertDirectory(argv[0], argv[1] + "_base64");
     }
 }

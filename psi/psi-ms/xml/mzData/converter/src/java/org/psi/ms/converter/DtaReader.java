@@ -146,12 +146,10 @@ public class DtaReader {
 
     private int addXMLArrays(Acquisition acquisition, BufferedReader bufferedReader) {
         StringTokenizer stringTokenizer;
-        AcquisitionTypeSequence acquisitionSequence = new AcquisitionTypeSequence();
-        acquisition.setAcquisitionTypeSequence(acquisitionSequence);
         MzArray mzArray = new MzArray();
-        acquisitionSequence.setMzArray(mzArray);
+        acquisition.setMzArray(mzArray);
         IntenArray intenArray = new IntenArray();
-        acquisitionSequence.setIntenArray(intenArray);
+        acquisition.setIntenArray(intenArray);
 
         String line;
         int size = 0;
@@ -204,12 +202,10 @@ public class DtaReader {
         System.out.println("Length of intensityArray: " + intensityArray.length);
         System.out.println("Length of intensityFloatList: " + intensityFloatList.size());
 */
-        AcquisitionTypeSequence2 acquisitionSequence2 = new AcquisitionTypeSequence2();
-        acquisition.setAcquisitionTypeSequence2(acquisitionSequence2);
         MzArrayBinary mzArrayBinary = new MzArrayBinary();
-        acquisitionSequence2.setMzArrayBinary(mzArrayBinary);
+        acquisition.setMzArrayBinary(mzArrayBinary);
         IntenArrayBinary intenArrayBinary = new IntenArrayBinary();
-        acquisitionSequence2.setIntenArrayBinary(intenArrayBinary);
+        acquisition.setIntenArrayBinary(intenArrayBinary);
 
         Data mzData = new Data();
         mzData.setContent(mzFloatArray);
