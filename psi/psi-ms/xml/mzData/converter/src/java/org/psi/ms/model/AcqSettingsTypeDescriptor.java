@@ -137,7 +137,7 @@ public class AcqSettingsTypeDescriptor extends org.exolab.castor.xml.util.XMLCla
         }
         desc.setValidator(fieldValidator);
         //-- _instrument
-        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.psi.ms.model.Instrument.class, "_instrument", "instrument", org.exolab.castor.xml.NodeType.Element);
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(org.psi.ms.model.Instrument2.class, "_instrument", "instrument", org.exolab.castor.xml.NodeType.Element);
         handler = (new org.exolab.castor.xml.XMLFieldHandler() {
             public java.lang.Object getValue( java.lang.Object object ) 
                 throws IllegalStateException
@@ -157,7 +157,7 @@ public class AcqSettingsTypeDescriptor extends org.exolab.castor.xml.util.XMLCla
                 }
             }
             public java.lang.Object newInstance( java.lang.Object parent ) {
-                return new org.psi.ms.model.Instrument();
+                return new org.psi.ms.model.Instrument2();
             }
         } );
         desc.setHandler(handler);
