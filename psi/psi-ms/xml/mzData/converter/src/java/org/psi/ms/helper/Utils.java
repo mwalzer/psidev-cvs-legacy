@@ -45,7 +45,7 @@ public class Utils {
             raw[jjj] = (byte) ((ieee754 >> 24) & 0xff);
             raw[jjj + 1] = (byte) ((ieee754 >> 16) & 0xff);
             raw[jjj + 2] = (byte) ((ieee754 >> 8) & 0xff);
-            raw[jjj + 3] = (byte) ((ieee754 >> 24) & 0xff);
+            raw[jjj + 3] = (byte) ((ieee754) & 0xff);
             jjj += 4;
         }
         return raw;
