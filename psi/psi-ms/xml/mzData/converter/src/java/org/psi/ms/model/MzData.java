@@ -89,14 +89,6 @@ public class MzData implements java.io.Serializable {
         Test test = new Test();
         desc.setTest(test);
 
-        DataProcessing dataProcessing = new DataProcessing();
-        test.addDataProcessing(dataProcessing);
-
-        Software software = new Software();
-        software.setName("PSI-MS .dta/.zta converter");
-        software.setVersion("1.00");
-        dataProcessing.setSoftware(software);
-
         ProcessingMethod processingMethod = new ProcessingMethod();
         test.setProcessingMethod(processingMethod);
 
