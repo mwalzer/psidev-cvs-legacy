@@ -90,13 +90,8 @@ public class RawDataType implements java.io.Serializable {
     /**
      * Method getFloat
      */
-    public float[] getFloat() {
-        int size = _floatList.size();
-        float[] mArray = new float[size];
-        for (int index = 0; index < size; index++) {
-            mArray[index] = ((Float) _floatList.elementAt(index)).floatValue();
-        }
-        return mArray;
+    public java.util.List getFloat() {
+        return _floatList;
     } //-- float[] getFloat()
 
     /**
