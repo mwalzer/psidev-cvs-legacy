@@ -14,8 +14,8 @@ package org.psi.ms.model;
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 
-import java.util.Vector;
 import java.util.Hashtable;
+import java.util.Vector;
 
 /**
  * Invariant ion source information
@@ -352,8 +352,8 @@ public class Source implements java.io.Serializable {
     public static class Type implements java.io.Serializable {
 
 
-          //--------------------------/
-         //- Class/Member Variables -/
+        //--------------------------/
+        //- Class/Member Variables -/
         //--------------------------/
 
         /**
@@ -432,8 +432,8 @@ public class Source implements java.io.Serializable {
         private java.lang.String stringValue = null;
 
 
-          //----------------/
-         //- Constructors -/
+        //----------------/
+        //- Constructors -/
         //----------------/
 
         private Type(int type, java.lang.String value) {
@@ -443,32 +443,29 @@ public class Source implements java.io.Serializable {
         } //-- Type(int, java.lang.String)
 
 
-          //-----------/
-         //- Methods -/
+        //-----------/
+        //- Methods -/
         //-----------/
 
         /**
          * Method enumerateReturns an enumeration of all possible
          * instances of Type
          */
-        public static java.util.Enumeration enumerate()
-        {
+        public static java.util.Enumeration enumerate() {
             return _memberTable.elements();
         } //-- java.util.Enumeration enumerate()
 
         /**
          * Method getTypeReturns the type of this Type
          */
-        public int getType()
-        {
+        public int getType() {
             return this.type;
         } //-- int getType()
 
         /**
          * Method init
          */
-        private static java.util.Hashtable init()
-        {
+        private static java.util.Hashtable init() {
             Hashtable members = new Hashtable();
             members.put("ESI", ESI);
             members.put("uESI", UESI);
@@ -483,8 +480,7 @@ public class Source implements java.io.Serializable {
          * Method toStringReturns the String representation of this
          * Type
          */
-        public java.lang.String toString()
-        {
+        public java.lang.String toString() {
             return this.stringValue;
         } //-- java.lang.String toString()
 
@@ -494,8 +490,7 @@ public class Source implements java.io.Serializable {
          *
          * @param string
          */
-        public static Type valueOf(java.lang.String string)
-        {
+        public static Type valueOf(java.lang.String string) {
             java.lang.Object obj = null;
             if (string != null) obj = _memberTable.get(string);
             if (obj == null) {

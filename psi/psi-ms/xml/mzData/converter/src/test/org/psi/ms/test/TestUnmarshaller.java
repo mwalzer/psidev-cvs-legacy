@@ -10,8 +10,11 @@ package org.psi.ms.test;
 
 import org.exolab.castor.xml.MarshalException;
 import org.exolab.castor.xml.ValidationException;
-import org.psi.ms.model.*;
 import org.psi.ms.helper.Utils;
+import org.psi.ms.model.Acquisition;
+import org.psi.ms.model.AcquisitionList;
+import org.psi.ms.model.MzArrayBinary;
+import org.psi.ms.model.MzData;
 
 import java.io.FileReader;
 import java.io.IOException;

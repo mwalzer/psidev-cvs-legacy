@@ -9,7 +9,7 @@
 package org.psi.ms.helper;
 
 /**
- * 
+ *
  * @author krunte
  */
 public class PsiMsConverterException extends Exception {

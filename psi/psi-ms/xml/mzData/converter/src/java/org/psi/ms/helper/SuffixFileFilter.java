@@ -8,8 +8,8 @@
  */
 package org.psi.ms.helper;
 
-import java.io.FilenameFilter;
 import java.io.File;
+import java.io.FilenameFilter;
 
 /**
  * A FilenameFilter for filtering according to the suffix of the filename.

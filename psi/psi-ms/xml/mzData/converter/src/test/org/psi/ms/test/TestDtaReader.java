@@ -8,14 +8,13 @@
  */
 package org.psi.ms.test;
 
-import org.exolab.castor.xml.MarshalException;
-import org.exolab.castor.xml.ValidationException;
-import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.mapping.Mapping;
 import org.exolab.castor.mapping.MappingException;
-import org.psi.ms.model.*;
-import org.psi.ms.model.types.SourceTypeTypeType;
+import org.exolab.castor.xml.MarshalException;
+import org.exolab.castor.xml.Marshaller;
+import org.exolab.castor.xml.ValidationException;
 import org.psi.ms.converter.DtaReader;
+import org.psi.ms.model.*;
 import org.xml.sax.InputSource;
 
 import java.io.FileWriter;

@@ -21,8 +21,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Serializable;
 import java.io.Writer;
-import java.util.Vector;
 import java.util.Hashtable;
+import java.util.Vector;
 
 /**
  * InstrumentCommonSettings information common to all acquisitions is stored in
@@ -454,8 +454,8 @@ public class InstrumentAcqSettings implements Serializable {
     public static class AcqType implements java.io.Serializable {
 
 
-          //--------------------------/
-         //- Class/Member Variables -/
+        //--------------------------/
+        //- Class/Member Variables -/
         //--------------------------/
 
         /**
@@ -554,8 +554,8 @@ public class InstrumentAcqSettings implements Serializable {
         private java.lang.String stringValue = null;
 
 
-          //----------------/
-         //- Constructors -/
+        //----------------/
+        //- Constructors -/
         //----------------/
 
         private AcqType(int type, java.lang.String value) {
@@ -565,16 +565,15 @@ public class InstrumentAcqSettings implements Serializable {
         } //-- AcqType(int, java.lang.String)
 
 
-          //-----------/
-         //- Methods -/
+        //-----------/
+        //- Methods -/
         //-----------/
 
         /**
          * Method enumerateReturns an enumeration of all possible
          * instances of AcqType
          */
-        public static java.util.Enumeration enumerate()
-        {
+        public static java.util.Enumeration enumerate() {
             return _memberTable.elements();
         } //-- java.util.Enumeration enumerate()
 
@@ -582,16 +581,14 @@ public class InstrumentAcqSettings implements Serializable {
          * Method getTypeReturns the type of this
          * AcqType
          */
-        public int getType()
-        {
+        public int getType() {
             return this.type;
         } //-- int getType()
 
         /**
          * Method init
          */
-        private static java.util.Hashtable init()
-        {
+        private static java.util.Hashtable init() {
             Hashtable members = new Hashtable();
             members.put("full", FULL);
             members.put("zoom", ZOOM);
@@ -608,8 +605,7 @@ public class InstrumentAcqSettings implements Serializable {
          * Method toStringReturns the String representation of this
          * AcqType
          */
-        public java.lang.String toString()
-        {
+        public java.lang.String toString() {
             return this.stringValue;
         } //-- java.lang.String toString()
 
@@ -620,8 +616,7 @@ public class InstrumentAcqSettings implements Serializable {
          *
          * @param string
          */
-        public static AcqType valueOf(java.lang.String string)
-        {
+        public static AcqType valueOf(java.lang.String string) {
             java.lang.Object obj = null;
             if (string != null) obj = _memberTable.get(string);
             if (obj == null) {
@@ -641,8 +636,8 @@ public class InstrumentAcqSettings implements Serializable {
     public static class Polarity implements java.io.Serializable {
 
 
-          //--------------------------/
-         //- Class/Member Variables -/
+        //--------------------------/
+        //- Class/Member Variables -/
         //--------------------------/
 
         /**
@@ -691,8 +686,8 @@ public class InstrumentAcqSettings implements Serializable {
         private java.lang.String stringValue = null;
 
 
-          //----------------/
-         //- Constructors -/
+        //----------------/
+        //- Constructors -/
         //----------------/
 
         private Polarity(int type, java.lang.String value) {
@@ -702,16 +697,15 @@ public class InstrumentAcqSettings implements Serializable {
         } //-- Polarity(int, java.lang.String)
 
 
-          //-----------/
-         //- Methods -/
+        //-----------/
+        //- Methods -/
         //-----------/
 
         /**
          * Method enumerateReturns an enumeration of all possible
          * instances of Polarity
          */
-        public static java.util.Enumeration enumerate()
-        {
+        public static java.util.Enumeration enumerate() {
             return _memberTable.elements();
         } //-- java.util.Enumeration enumerate()
 
@@ -719,16 +713,14 @@ public class InstrumentAcqSettings implements Serializable {
          * Method getTypeReturns the type of this
          * Polarity
          */
-        public int getType()
-        {
+        public int getType() {
             return this.type;
         } //-- int getType()
 
         /**
          * Method init
          */
-        private static java.util.Hashtable init()
-        {
+        private static java.util.Hashtable init() {
             Hashtable members = new Hashtable();
             members.put("+", VALUE_0);
             members.put("-", VALUE_1);
@@ -740,8 +732,7 @@ public class InstrumentAcqSettings implements Serializable {
          * Method toStringReturns the String representation of this
          * Polarity
          */
-        public java.lang.String toString()
-        {
+        public java.lang.String toString() {
             return this.stringValue;
         } //-- java.lang.String toString()
 
@@ -752,8 +743,7 @@ public class InstrumentAcqSettings implements Serializable {
          *
          * @param string
          */
-        public static Polarity valueOf(java.lang.String string)
-        {
+        public static Polarity valueOf(java.lang.String string) {
             java.lang.Object obj = null;
             if (string != null) obj = _memberTable.get(string);
             if (obj == null) {

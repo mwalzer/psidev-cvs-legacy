@@ -8,16 +8,15 @@
  */
 package org.psi.ms.converter;
 
-import org.exolab.castor.xml.MarshalException;
-import org.exolab.castor.xml.ValidationException;
-import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.mapping.Mapping;
 import org.exolab.castor.mapping.MappingException;
-import org.psi.ms.model.*;
-import org.psi.ms.model.types.*;
+import org.exolab.castor.xml.MarshalException;
+import org.exolab.castor.xml.Marshaller;
+import org.exolab.castor.xml.ValidationException;
 import org.psi.ms.helper.PsiMsConverterException;
 import org.psi.ms.helper.SuffixFileFilter;
 import org.psi.ms.helper.Utils;
+import org.psi.ms.model.*;
 import org.xml.sax.InputSource;
 
 import java.io.File;

@@ -17,7 +17,7 @@ import org.psi.ms.helper.PsiMsConverterException;
 import java.io.IOException;
 
 /**
- * 
+ *
  * @author krunte
  */
 public class TestDtaSetConverter {
