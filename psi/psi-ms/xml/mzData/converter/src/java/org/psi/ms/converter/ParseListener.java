@@ -19,4 +19,8 @@ public interface ParseListener {
     public void indeterminiteProcess();
 
     public void setMessage(String message);
+
+    void setMax(int piMax);
+
+    void increment();
 }
