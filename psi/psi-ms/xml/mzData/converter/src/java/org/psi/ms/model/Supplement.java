@@ -12,7 +12,6 @@ package org.psi.ms.model;
 //---------------------------------/
 
 
-
 /**
  * This is an individual supplemental data item. These may or may
  * not be keyed to an acqusition.
@@ -35,15 +34,6 @@ public class Supplement implements java.io.Serializable {
      * element.
      */
     private DataArray _dataArray;
-    /**
-     * In addition to the m/z and intensity arrays, an arbitrary
-     * number of other arrays can be stored using the same
-     * indexing. For each array stored as base64 binary a precision
-     * must be specified. The only type allowed is IEEE-754
-     * floating point.
-     */
-    private DataArrayBinary _dataArrayBinary;
-
 
     //----------------/
     //- Constructors -/
@@ -70,20 +60,6 @@ public class Supplement implements java.io.Serializable {
     public DataArray getDataArray() {
         return this._dataArray;
     } //-- org.psi.ms.model.DataArray getDataArray()
-
-    /**
-     * Returns the value of field 'dataArrayBinary'. The field
-     * 'dataArrayBinary' has the following description: In addition
-     * to the m/z and intensity arrays, an arbitrary number of
-     * other arrays can be stored using the same indexing. For each
-     * array stored as base64 binary a precision must be specified.
-     * The only type allowed is IEEE-754 floating point.
-     *
-     * @return the value of field 'dataArrayBinary'.
-     */
-    public DataArrayBinary getDataArrayBinary() {
-        return this._dataArrayBinary;
-    } //-- org.psi.ms.model.DataArrayBinary getDataArrayBinary()
 
     /**
      * Returns the value of field 'id'.
@@ -113,20 +89,6 @@ public class Supplement implements java.io.Serializable {
     public void setDataArray(DataArray dataArray) {
         this._dataArray = dataArray;
     } //-- void setDataArray(org.psi.ms.model.DataArray)
-
-    /**
-     * Sets the value of field 'dataArrayBinary'. The field
-     * 'dataArrayBinary' has the following description: In addition
-     * to the m/z and intensity arrays, an arbitrary number of
-     * other arrays can be stored using the same indexing. For each
-     * array stored as base64 binary a precision must be specified.
-     * The only type allowed is IEEE-754 floating point.
-     *
-     * @param dataArrayBinary the value of field 'dataArrayBinary'.
-     */
-    public void setDataArrayBinary(DataArrayBinary dataArrayBinary) {
-        this._dataArrayBinary = dataArrayBinary;
-    } //-- void setDataArrayBinary(org.psi.ms.model.DataArrayBinary)
 
     /**
      * Sets the value of field 'id'.
