@@ -167,6 +167,8 @@ public class AcqDesc implements java.io.Serializable {
      * @return the value of field 'acqSettings'.
      */
     public AcqSettings getAcqSettings() {
+        if (_acqSettings == null)
+            _acqSettings = new AcqSettings();
         return this._acqSettings;
     } //-- org.psi.ms.model.AcqSettings getAcqSettings()
 

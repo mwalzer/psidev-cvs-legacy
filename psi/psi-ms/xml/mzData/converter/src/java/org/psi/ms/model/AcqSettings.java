@@ -23,7 +23,7 @@ public class AcqSettings implements java.io.Serializable {
     /**
      * Type of spectrum
      */
-    private SpecType _specType;
+    private SpecType _specType = SpecType.DISCRETE;
     /**
      * Specification for combining raw scans/acquisitions into a
      * single peak list. Either a list of acquisitions, or a range
@@ -63,6 +63,8 @@ public class AcqSettings implements java.io.Serializable {
      * @return the value of field 'acqSpecification'.
      */
     public AcqSpecification getAcqSpecification() {
+        if (_acqSpecification == null)
+            _acqSpecification = new AcqSpecification();
         return this._acqSpecification;
     } //-- org.psi.ms.model.AcqSpecification getAcqSpecification()
 
@@ -81,6 +83,8 @@ public class AcqSettings implements java.io.Serializable {
      * @return the value of field 'instrument'.
      */
     public InstrumentAcqSettings getInstrument() {
+        if (_instrument == null)
+            _instrument = new InstrumentAcqSettings();
         return this._instrument;
     } //-- org.psi.ms.model.InstrumentAcqSettings getInstrument2()
 

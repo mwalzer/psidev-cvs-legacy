@@ -71,6 +71,8 @@ public class Acquisition implements java.io.Serializable {
      * @return the value of field 'intenArray'.
      */
     public RawDataType getIntenArray() {
+        if (_intenArray == null)
+            _intenArray = new RawDataType();
         return this._intenArray;
     } //-- org.psi.ms.model.RawDataType getIntenArray()
 
@@ -84,6 +86,8 @@ public class Acquisition implements java.io.Serializable {
      * @return the value of field 'mzArray'.
      */
     public RawDataType getMzArray() {
+        if (_mzArray == null)
+            _mzArray = new RawDataType();
         return this._mzArray;
     } //-- org.psi.ms.model.RawDataType getMzArray()
 
@@ -99,6 +103,8 @@ public class Acquisition implements java.io.Serializable {
      * @return the acquisition's description.
      */
     public AcqDesc getAcqDesc() {
+        if (acqDesc == null)
+            acqDesc = new AcqDesc();
         return acqDesc;
     }
 
