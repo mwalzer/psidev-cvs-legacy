@@ -78,10 +78,10 @@ public class DtaReader {
         AcqSettings acqSettings = new AcqSettings();
         acqDesc.setAcqSettings(acqSettings);
         if (fileType == DTA) {
-            acqSettings.setSpecType(AcqSettingsType.SpecType.DISCRETE);
+            acqSettings.setSpecType(AcqSettings.SpecType.DISCRETE);
         }
         if (fileType == ZTA) {
-            acqSettings.setSpecType(AcqSettingsType.SpecType.CONTINUOUS);
+            acqSettings.setSpecType(AcqSettings.SpecType.CONTINUOUS);
         }
 
         // At this stage we don't know yet the range or list of acquisition numbers
