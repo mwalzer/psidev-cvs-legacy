@@ -163,8 +163,8 @@ public class DtaReader {
                 String intensityString = stringTokenizer.nextToken();
                 Float mz = new Float(mzString);
                 Float intensity = new Float(intensityString);
-                mzArray.add_float(mz.floatValue());
-                intenArray.add_float(intensity.floatValue());
+                mzArray.addFloat(mz.floatValue());
+                intenArray.addFloat(intensity.floatValue());
             }
         } catch (IOException e) {
             // EOF

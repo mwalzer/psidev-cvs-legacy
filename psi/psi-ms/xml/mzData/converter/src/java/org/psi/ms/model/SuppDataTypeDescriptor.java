@@ -73,7 +73,7 @@ public class SuppDataTypeDescriptor extends org.exolab.castor.xml.util.XMLClassD
                 throws IllegalStateException
             {
                 SuppDataType target = (SuppDataType) object;
-                return target.get_float();
+                return target.getFloat();
             }
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
@@ -83,7 +83,7 @@ public class SuppDataTypeDescriptor extends org.exolab.castor.xml.util.XMLClassD
                     // ignore null values for non optional primitives
                     if (value == null) return;
                     
-                    target.add_float( ((Float)value).floatValue());
+                    target.addFloat( ((Float)value).floatValue());
                 }
                 catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
@@ -113,7 +113,7 @@ public class SuppDataTypeDescriptor extends org.exolab.castor.xml.util.XMLClassD
                 throws IllegalStateException
             {
                 SuppDataType target = (SuppDataType) object;
-                return target.get_int();
+                return target.getInt();
             }
             public void setValue( java.lang.Object object, java.lang.Object value) 
                 throws IllegalStateException, IllegalArgumentException
@@ -123,7 +123,7 @@ public class SuppDataTypeDescriptor extends org.exolab.castor.xml.util.XMLClassD
                     // ignore null values for non optional primitives
                     if (value == null) return;
                     
-                    target.add_int( ((Integer)value).intValue());
+                    target.addInt( ((Integer)value).intValue());
                 }
                 catch (java.lang.Exception ex) {
                     throw new IllegalStateException(ex.toString());
