@@ -55,6 +55,52 @@ public class MzData implements java.io.Serializable {
     public MzData() {
         super();
         setVersion("1.00");
+
+        // For simplicity all these "default" values of MzData are set in the constructor
+        Desc desc = new Desc();
+        setDesc(desc);
+        Admin admin = new Admin();
+        desc.setAdmin(admin);
+
+        // Todo: this information must be provided by the user
+        admin.setSampleName("?");
+        Person contact = new Person();
+        contact.setName("Kai Runte");
+        contact.setInstitution("EMBL Outstation - EBI");
+        admin.setContact(contact);
+
+        // Todo: this information must be provided by the user
+        InstrumentCommonSettings instrument = new InstrumentCommonSettings();
+        instrument.setInstName("unknown");
+        Source source = new Source();
+        source.setType(Source.Type.OTHER);
+        instrument.setSource(source);
+        Analyzer analyzer = new Analyzer();
+        analyzer.setType(Analyzer.Type.OTHER);
+        float unknown = -1;
+        analyzer.setResolution(unknown);
+        analyzer.setAccuracy(unknown);
+        instrument.setAnalyzer(analyzer);
+        Detector detector = new Detector();
+        detector.setType(Detector.Type.OTHER);
+        instrument.setDetector(detector);
+        desc.setInstrument(instrument);
+
+        Test test = new Test();
+        desc.setTest(test);
+
+        DataProcessing dataProcessing = new DataProcessing();
+        test.addDataProcessing(dataProcessing);
+
+        Software software = new Software();
+        software.setName("PSI-MS .dta/.zta converter");
+        software.setVersion("1.00");
+        dataProcessing.setSoftware(software);
+
+        ProcessingMethod processingMethod = new ProcessingMethod();
+        test.setProcessingMethod(processingMethod);
+
+        processingMethod.setPeakProcessing("?");
     } //-- org.psi.ms.model.MzData()
 
 
