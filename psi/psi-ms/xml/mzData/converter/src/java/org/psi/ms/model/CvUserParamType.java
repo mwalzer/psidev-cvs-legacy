@@ -18,7 +18,7 @@ package org.psi.ms.model;
  *
  * @version $Revision$ $Date$
  */
-public abstract class CvUserParamType implements java.io.Serializable {
+public abstract class CvUserParamType extends MultiTypeValue implements java.io.Serializable {
 
 
     //--------------------------/

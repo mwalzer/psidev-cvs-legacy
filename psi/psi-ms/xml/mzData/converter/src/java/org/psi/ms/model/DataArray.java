@@ -18,6 +18,10 @@ import java.util.Vector;
  * supplemental data array was a string- or other non-binary type,
  * then it can be represented in the dataArray element.
  *
+ * Todo: This class needs to be simplified so that there is only one Vector.
+ * The values accepted in this Vector are defined by the first item
+ * added to this Vector.
+ *
  * @version $Revision$ $Date$
  */
 public class DataArray implements java.io.Serializable {

@@ -7,6 +7,9 @@
 
 package org.psi.ms.model;
 
+import java.util.Date;
+import java.net.URI;
+
 //---------------------------------/
 //- Imported classes and packages -/
 //---------------------------------/
@@ -18,7 +21,7 @@ package org.psi.ms.model;
  *
  * @version $Revision$ $Date$
  */
-public abstract class CvCoreParamType implements java.io.Serializable {
+public abstract class CvCoreParamType extends MultiTypeValue implements java.io.Serializable {
 
 
     //--------------------------/
@@ -39,6 +42,7 @@ public abstract class CvCoreParamType implements java.io.Serializable {
      * keeps track of state for field: _xref
      */
     private boolean _has_xref;
+
 
     /**
      * Field _cvCoreParamTypeChoice

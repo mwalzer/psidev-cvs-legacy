@@ -29,15 +29,6 @@ public class RawDataType implements java.io.Serializable {
      * Field _floatList
      */
     private java.util.Vector _floatList;
-    /**
-     * Field _length
-     */
-    private int _length;
-    /**
-     * keeps track of state for field: _length
-     */
-    private boolean _has_length;
-
 
     //----------------/
     //- Constructors -/
@@ -167,15 +158,8 @@ public class RawDataType implements java.io.Serializable {
      * @return the value of field 'length'.
      */
     public int getLength() {
-        return this._length;
+        return _floatList.size();
     } //-- int getLength()
-
-    /**
-     * Method hasLength
-     */
-    public boolean hasLength() {
-        return this._has_length;
-    } //-- boolean hasLength()
 
     /**
      * Sets the value of field 'length'.
@@ -183,8 +167,6 @@ public class RawDataType implements java.io.Serializable {
      * @param length the value of field 'length'.
      */
     public void setLength(int length) {
-        this._length = length;
-        this._has_length = true;
     } //-- void setLength(int)
 
 }
