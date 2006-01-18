@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * The definition of a rule. the check method should contain the logic of that particular rule.
- * @
+ * 
  * @author Samuel Kerrien (skerrien@ebi.ac.uk)
  * @version $Id$
  * @since <pre>26-Dec-2005</pre>
