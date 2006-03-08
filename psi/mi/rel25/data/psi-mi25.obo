@@ -4925,7 +4925,7 @@ name: international protein index
 def: "IPI provides a top level guide to the main databases that describe the proteomes of higher eukaryotic organisms. IPI effectively maintains a database of cross references between the primary data sources\, provides minimally redundant yet maximally complete sets of proteins for featured species (one sequence per transcript) and maintains stable identifiers (with incremental versioning) to allow the tracking of sequences in IPI between IPI releases. IPI is updated monthly in accordance with the latest data released by the primary data sources." [PMID:15221759]
 exact_synonym: "ipi" []
 is_a: MI:0473 ! participant database xref
-xref_unknown: id-validation-regexp:\"IPI\[0-9\]+.\[0-9\]+|IPI\[0-9\]+\"
+xref_analog: id-validation-regexp:\"IPI\[0-9\]+.\[0-9\]+|IPI\[0-9\]+\"
 
 [Term]
 id: MI:0676
