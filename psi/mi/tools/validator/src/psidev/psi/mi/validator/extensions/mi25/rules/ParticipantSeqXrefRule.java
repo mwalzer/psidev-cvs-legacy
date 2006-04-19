@@ -130,7 +130,7 @@ public class ParticipantSeqXrefRule extends Mi25Rule {
                                 context,
                                 this));
 
-                    } else if (! mi_db.equals("MI:0486")) {
+                    } else if (! mi_db.equals(Mi25Ontology.UNIPROT_MI)) {
                         Mi25Context context = new Mi25Context();
                         context.setInteractionId(interactionId);
                         context.setParticipantId(participantId);
