@@ -26,6 +26,9 @@ public class InteractionTypeRule extends Mi25Rule {
 
     public InteractionTypeRule( Map ontologies ) {
         super( ontologies );
+        setName("Interaction Type Rule");
+        setDescription("Checks that each interaction has a CV interaction Type (not mandatory in PSI)");
+        addTip("It is recomended to provide a CV term for interaction type, see  in the psi-mi25.obo the list of children terms of " + Mi25Ontology.InteractionTypeRoot +".");
     }
 
     public Collection<ValidatorMessage> check( Object jaxbObject ) throws ValidatorException {
