@@ -88,7 +88,7 @@ public class FeatureTypeRule extends Mi25Rule {
                                 Mi25Context context = new Mi25Context();
                                 context.setInteractionId(interactionId);
                                 context.setParticipantId(participantId);
-                                context.setInteractorId(featureId);
+                                context.setFeatureId(featureId);
 
                                 messages.add(new ValidatorMessage("Term does not belong to CV feature type (" + term.getId() + ")",
                                         MessageLevel.WARN,
@@ -102,7 +102,7 @@ public class FeatureTypeRule extends Mi25Rule {
                         Mi25Context context = new Mi25Context();
                         context.setInteractionId(interactionId);
                         context.setParticipantId(participantId);
-                        context.setInteractorId(featureId);
+                        context.setFeatureId(featureId);
 
                         messages.add(new ValidatorMessage("Feature without CV feature type ",
                                 MessageLevel.WARN,
