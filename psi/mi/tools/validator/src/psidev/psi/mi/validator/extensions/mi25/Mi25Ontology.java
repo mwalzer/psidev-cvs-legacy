@@ -27,6 +27,7 @@ public class Mi25Ontology extends AbstractOntology {
     public static final String PUBMED_MI = "MI:0446";
     public static final String DOI_MI = "MI:0574";
     public static final String BAIT_MI = "MI:0496";
+    public static final String UNIPROT_MI = "MI:0486";
 
 
     ////////////////////////////
