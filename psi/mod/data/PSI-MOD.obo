@@ -4,6 +4,7 @@ saved-by: luisa
 auto-generated-by: OBO-Edit 1.000
 default-namespace: PSI-MOD
 remark: [PSI-MOD:ref] is to be replaced by the PubMed id of PSI-MOD paper when available
+version: $Id$
 
 [Term]
 id: MOD:00000
