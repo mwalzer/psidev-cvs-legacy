@@ -342,13 +342,22 @@ Notes:
     <tr>
       <td class="table-title">Inferred Interaction</td>
       <td>
-          <xsl:apply-templates/>
+        <table border="0">
+            <xsl:apply-templates select="psi:participant"/>
+            <tr>
+                <xsl:apply-templates select="psi:experimentRefList/psi:experimentRef"/>
+            </tr>
+        </table>
       </td>
     </tr>
 </xsl:template>
 
 <xsl:template match="psi:inferredInteraction/psi:participant">
-    <xsl:apply-templates/><br/>
+    <tr>
+        <td>
+            <xsl:apply-templates/>
+        </td>
+    </tr>
 </xsl:template>
 
 <xsl:template match="psi:biologicalRole">
