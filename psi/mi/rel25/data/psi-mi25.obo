@@ -18,14 +18,6 @@ remark: This file is published by the PSI MI working group see http://psidev.sou
 remark: Author Luisa Montecchi Palazzi luisa@ebi.ac.uk
 
 [Term]
-id: BS:00123
-name: 125i radiolabel
-def: "Molecule labelled with 125 radio isotope of iodine atoms." [PMID:14755292]
-related_synonym: "125I" []
-related_synonym: "I125" []
-is_a: MI:0517 ! radiolabel
-
-[Term]
 id: MI:0000
 name: molecular interaction
 def: "Controlled vocabularies originally created for protein protein interactions, extended to other molecules interactions." [PMID:14755292]
@@ -5912,6 +5904,14 @@ name: dansyl tag
 def: "Dansyl is fluorescent tag. Dansyl is the acronyme of 5-dimethylaminonaphthalene-1-sulfonyl radical group reacting with any NH2 groups." [PMID:14755292]
 related_synonym: "5-dimethylaminonaphthalene-1-sulfonyl tag" []
 is_a: MI:0507 ! tag
+
+[Term]
+id: MI:0848
+name: 125i radiolabel
+def: "Molecule labelled with 125 radio isotope of iodine atoms." [PMID:14755292]
+related_synonym: "125I" []
+related_synonym: "I125" []
+is_a: MI:0517 ! radiolabel
 
 [Typedef]
 id: part_of
