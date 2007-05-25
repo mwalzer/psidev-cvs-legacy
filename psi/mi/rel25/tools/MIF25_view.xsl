@@ -64,6 +64,9 @@ Notes:
                 Molecular Interaction
             </title>
             <style>
+                body    {
+                    font-family:        Verdana, Arial, sans-serif;
+                }
                 table   {
                     width:              100%;
                 }
@@ -492,6 +495,54 @@ Notes:
             <xsl:with-param name="title" select="'Interactor Type'"/>
         </xsl:apply-templates>
     </tr>
+</xsl:template>
+
+<xsl:template match="psi:negative">
+    <tr>
+        <td class="table-title">Negative:</td>
+        <td>
+            <xsl:value-of select="."/>
+        </td>
+    </tr>
+</xsl:template>
+
+<xsl:template match="psi:parameterList">
+    <tr>
+        <xsl:apply-templates select="current()"  mode="cellrow">
+            <xsl:with-param name="title" select="'Parameters'"/>
+        </xsl:apply-templates>
+    </tr>
+</xsl:template>
+
+<xsl:template match="psi:parameter">
+    <tr>
+        <td class="table-title">Term:</td>
+        <td>
+            <xsl:value-of select="@term"/>
+            (<xsl:value-of select="@termAc"/>)
+        </td>
+    </tr>
+    <tr>
+        <td class="table-title">Unit:</td>
+        <td>
+            <xsl:value-of select="@unit"/>
+            (<xsl:value-of select="@unitAc"/>)
+        </td>
+    </tr>
+    <tr>
+        <td class="table-title">Factor:</td>
+        <td><xsl:value-of select="@factor"/></td>
+    </tr>
+    <!--
+        Not quite sure why there's an experimentRef in the schema here,
+        given that there's already one under interaction/experimentList
+     -->
+    <xsl:if test="psi:experimentRef">
+        <tr>
+            <td class="table-title">Experiment:</td>
+            <xsl:apply-templates select="psi:experimentRef"/>
+        </tr>
+    </xsl:if>
 </xsl:template>
 
 <xsl:template match="psi:organism | psi:hostOrganism">
