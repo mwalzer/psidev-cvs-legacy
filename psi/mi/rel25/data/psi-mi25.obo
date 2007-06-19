@@ -6132,20 +6132,20 @@ is_a: MI:0879 ! nucleoside triphosphatase assay
 [Term]
 id: MI:0881
 name: nucleoside triphosphatase reaction
-def: "Catalysis of the hydrolisis of a  nucleoside triphosphate into a nucleoside diphosphate plus phosphate." [GO:0017111]
+def: "Catalysis of the hydrolisis of a  nucleoside triphosphate into a nucleoside diphosphate plus phosphate." [GO:0017111, PMID:14755292]
 exact_synonym: "triphosphatase react" []
 is_a: MI:0414 ! enzymatic reaction
 
 [Term]
 id: MI:0882
 name: atpase reaction
-def: "Catalysis of the hydrolisis of ATP+ H2O = ADP + phosphate." [GO:0016887]
+def: "Catalysis of the hydrolisis of ATP+ H2O = ADP + phosphate." [GO:0016887, PMID:14755292]
 is_a: MI:0881 ! nucleoside triphosphatase reaction
 
 [Term]
 id: MI:0883
 name: gtpase reaction
-def: "Catalysis of the hydrolisis of GTP+ H2O = GDP + phosphate." [GO:0003924]
+def: "Catalysis of the hydrolisis of GTP+ H2O = GDP + phosphate." [GO:0003924, PMID:14755292]
 is_a: MI:0881 ! nucleoside triphosphatase reaction
 
 [Term]
