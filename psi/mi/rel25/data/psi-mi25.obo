@@ -6870,7 +6870,7 @@ is_a: MI:0396 ! predetermined participant
 [Term]
 id: MI:0867
 name: tag visualisation by fluorescence
-def: "Immunostaining assay performed when specific antibodies for the protein of interest are not available. Therefore the  protein is expressed as a hybrid protein fused to a tag peptide/protein for which efficient antibodies are available. The anti tag antibody may be either monoclonal or polyclonal." [PMID:14755292]
+def: "The protein is either expressed as a hybrid protein fused to a tag containing a fluorophore, such as green fluorescent protein, or a fluorophore has been chemically attached to the protein. Subsequence observation or measurement of fluorescence is used to identify the presence of the molecule in an interaction." [PMID:14755292]
 subset: PSI-MI slim
 synonym: "tag fluorescence" EXACT PSI-MI-short []
 is_a: MI:0866 ! tag visualisation
@@ -7537,7 +7537,7 @@ id: MI:2046
 name: lethal dose 50
 def: "The LD50 is the dose that kills half (50%) of the animals tested" [PMID:14755292]
 subset: Drugable
-synonym: "ld50" RELATED []
+synonym: "ld50" EXACT PSI-MI-alternate []
 synonym: "lethal dose 50 %" EXACT PSI-MI-alternate []
 is_a: MI:2135 ! toxicity
 
