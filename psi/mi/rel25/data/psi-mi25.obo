@@ -7837,7 +7837,7 @@ is_a: MI:2115 ! pharmacokinetics
 
 [Term]
 id: MI:2127
-name: tmax/cmax -sandra
+name: tmax/cmax
 def: "Ratio between the time value at Cmax (maximum concentration) in a dose response curve, and the Cmax value itself." [PMID:14755292]
 comment: The prediction of the value for this paramter is currently not possible.
 subset: Drugable
