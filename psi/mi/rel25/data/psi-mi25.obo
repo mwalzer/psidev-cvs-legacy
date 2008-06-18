@@ -6590,7 +6590,7 @@ is_a: MI:0473 ! participant database
 [Term]
 id: MI:0832
 name: half cystine
-def: "A protein modification that is effectively either one half of a cystine cross-link, or a cysteine residue with one hydrogen atom or proton removed" [MOD:00798, RESID:AA0025, UniMod:374]
+def: "A protein modification that is effectively either one half of a cystine cross-link, or a cysteine residue with one hydrogen atom or proton removed" [MOD:00798, RESID:AA0025]
 subset: PSI-MI slim
 synonym: "Half of a disulfide bridge" EXACT PSI-MI-alternate []
 is_a: MI:0179 ! other modification
