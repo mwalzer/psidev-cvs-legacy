@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 3.77.0
-date: 06:08:2015 08:55
+data-version: 3.78.0_rc1
+date: 15:09:2015 14:02
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3
 import: http://pato.googlecode.com/svn/trunk/quality.obo
@@ -8,8 +8,8 @@ import: http://unit-ontology.googlecode.com/svn/trunk/unit.obo
 default-namespace: MS
 namespace-id-rule: * MS:$sequence(7,0,9999999)$
 remark: namespace: MS
-remark: version: 3.77.0
-remark: release date: 2015-08-06
+remark: version: 3.78.0_rc1
+remark: release date: 2015-09-15
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -24,8 +24,7 @@ remark: For any queries contact psidev-ms-vocab@lists.sourceforge.net
 remark: URL: http://psidev.cvs.sourceforge.net/viewvc/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo
 remark: This work is licensed under the Creative Commons Attribution 3.0 Unported License.
 remark: To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
-ontology: pato
-ontology: uo
+ontology: ms
 
 [Typedef]
 id: has_regexp
@@ -934,6 +933,7 @@ name: negative scan
 def: "Polarity of the scan is negative." [PSI:MS]
 is_a: PATO:0002186 ! polarity
 is_a: MS:1000465 ! scan polarity
+is_a: MS:1000808 ! chromatogram attribute
 
 [Term]
 id: MS:1000130
@@ -941,6 +941,7 @@ name: positive scan
 def: "Polarity of the scan is positive." [PSI:MS]
 is_a: PATO:0002186 ! polarity
 is_a: MS:1000465 ! scan polarity
+is_a: MS:1000808 ! chromatogram attribute
 
 [Term]
 id: MS:1000131
