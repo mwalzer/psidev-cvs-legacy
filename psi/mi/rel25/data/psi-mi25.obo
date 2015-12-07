@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 21:09:2015 14:28
+date: 03:12:2015 12:52
 saved-by: ppm
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: Drugable "Drugable Genome Project"
@@ -3593,11 +3593,11 @@ is_a: MI:0444 ! database citation
 [Term]
 id: MI:0446
 name: pubmed
-def: "PubMed is designed to provide access to citations from biomedical literature.\nhttp://www.ncbi.nlm.nih.gov/entrez/query.fcgi" [PMID:14755292]
+def: "PubMed is designed to provide access to citations from biomedical literature. The data can be found at both NCBI PubMed and Europe PubMed Central. \nhttp://www.ncbi.nlm.nih.gov/entrez/query.fcgi\nhttp://europepmc.org" [PMID:14755292]
 subset: Drugable
 subset: PSI-MI_slim
 xref: id-validation-regexp:\"[0-9\]+\"
-xref: search-url: "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=${ac}&dopt=Abstract"
+xref: search-url: "http://europepmc.org/abstract/MED/${AC}"
 is_a: MI:0445 ! literature database
 
 [Term]
